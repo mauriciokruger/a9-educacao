@@ -32,6 +32,8 @@ class DistributionContract(unittest.TestCase):
                 self.assertTrue(all(n.startswith("a9-educacao/") for n in names))
                 self.assertFalse(any(".work" in n or ".git/" in n for n in names))
                 self.assertIsNone(bundle.testzip())
+                self.assertTrue(all(item.create_system == 3 for item in bundle.infolist()))
+                self.assertNotIn(b"\r\n", bundle.read("a9-educacao/assets/tokens/tokens.css"))
                 html = bundle.read("a9-educacao/assets/apresentacoes/demo-a9.html").decode("utf-8")
                 self.assertEqual(html.count('<section class="slide'), 8)
                 self.assertIn("data:font/ttf;base64,", html)

@@ -26,7 +26,7 @@ def build():
             lines.extend(f"  --{name}: {value};" for name, value in values.items())
     lines.append("}")
     css = "\n".join(lines) + "\n"
-    (ASSETS / "tokens/tokens.css").write_text(css, "utf-8")
+    (ASSETS / "tokens/tokens.css").write_text(css, "utf-8", newline="\n")
     font_css = []
     for file, weight in [("Regular", 400), ("Medium", 500), ("SemiBold", 600), ("Bold", 700), ("Black", 900)]:
         uri = data_uri(ASSETS / f"fonts/Poppins-{file}.ttf", "font/ttf")
@@ -37,11 +37,11 @@ def build():
     html = source.replace("{{FONT_CSS}}", "\n".join(font_css)).replace("{{TOKENS_CSS}}", css)
     html = html.replace("{{LOGO_WHITE}}", data_uri(ASSETS / "logos/a9-branco.png", "image/png"))
     demo = ASSETS / "apresentacoes/demo-a9.html"
-    demo.write_text(html, "utf-8")
+    demo.write_text(html, "utf-8", newline="\n")
     model = html.replace("IA na rotina da equipe", "[Título da apresentação]")
     model = model.replace("Uma tarefa real. Um pedido claro. Uma revisão cuidadosa.", "[Contexto, público e objetivo]")
     model = model.replace("Demonstração do padrão A9", "Modelo editável do padrão A9")
-    (ASSETS / "apresentacoes/modelo-a9.html").write_text(model, "utf-8")
+    (ASSETS / "apresentacoes/modelo-a9.html").write_text(model, "utf-8", newline="\n")
     return demo
 
 
@@ -77,10 +77,11 @@ def package(output):
             if path.is_file():
                 info = zipfile.ZipInfo("a9-educacao/" + path.relative_to(SKILL).as_posix(), (2026, 10, 27, 0, 0, 0))
                 info.compress_type = zipfile.ZIP_DEFLATED
+                info.create_system = 3
                 info.external_attr = 0o100644 << 16
                 bundle.writestr(info, path.read_bytes())
     checksum = hashlib.sha256(archive.read_bytes()).hexdigest()
-    (output / "SHA256SUMS.txt").write_text(f"{checksum}  {archive.name}\n", "utf-8")
+    (output / "SHA256SUMS.txt").write_text(f"{checksum}  {archive.name}\n", "utf-8", newline="\n")
     return archive
 
 
