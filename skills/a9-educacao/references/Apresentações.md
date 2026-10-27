@@ -10,7 +10,7 @@ Escrever primeiro a ideia central de cada slide. Reduzir texto antes de reduzir 
 
 ## Identidade
 
-- Canvas de referência de 1920 × 1080, proporção 16:9.
+- Canvas de referência de 1920 × 1080, proporção 16 por 9.
 - Margem lateral de 96 px, topo de 56 px e rodapé de 36 px.
 - Poppins para títulos e corpo. JetBrains Mono somente em códigos e identificadores.
 - Títulos de conteúdo entre 44 e 60 px, capa entre 60 e 84 px e corpo entre 24 e 32 px. Texto editorial não deve ficar abaixo de 24 px no canvas de referência.
@@ -30,7 +30,7 @@ Ao exportar para PPTX, manter a proporção e converter medidas do canvas propor
 | Conteúdo | Uma ideia com exemplo, imagem ou explicação curta |
 | KPI | Número principal, unidade, período e interpretação com fonte |
 | Comparação | Dois cenários com critérios equivalentes |
-| Gráfico | Eixos, unidades e rótulos legíveis; destaque no dado importante |
+| Gráfico | Eixos, unidades e rótulos legíveis. Destaque no dado importante |
 | Citação | Trecho curto com autoria e origem verificadas |
 | Encerramento | Próximo passo coerente com o objetivo da apresentação |
 
@@ -38,11 +38,11 @@ Na demonstração do pacote, números e falas estão identificados como fictíci
 
 ## Interação no HTML
 
-Manter botões Anterior e Próximo, indicador atual/total e acesso ao slide por índice. Setas, PageUp/PageDown, espaço, Home e End navegam. F ativa tela cheia; o botão visível oferece a mesma ação; Esc sai pelo navegador.
+Manter botões Anterior e Próximo, indicador atual/total e acesso ao slide por índice. Setas, PageUp/PageDown, espaço, Home e End navegam. F ativa tela cheia. O botão visível oferece a mesma ação. Esc sai pelo navegador.
 
 Não capturar atalhos quando o foco estiver em input, textarea, select ou conteúdo editável. Anunciar mudança de slide de forma acessível sem transformar todo o slide em região de leitura automática.
 
-Os controles permanecem acessíveis no celular e não cobrem conteúdo. Em telas estreitas, priorizar leitura, permitindo apresentação em fluxo com o slide ativo. O modo de projeção conserva 16:9.
+Os controles permanecem acessíveis no celular e não cobrem conteúdo. Em telas estreitas, priorizar leitura, permitindo apresentação em fluxo com o slide ativo. O modo de projeção conserva 16 por 9.
 
 Fontes e logo incorporadas evitam dependência de internet. Remover links externos de fontes, scripts ou bibliotecas ao produzir um HTML offline. Usar imagens locais ou incorporadas com origem autorizada.
 

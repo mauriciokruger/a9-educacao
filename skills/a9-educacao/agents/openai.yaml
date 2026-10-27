@@ -1,6 +1,6 @@
 interface:
   display_name: "A9 Educação"
-  short_description: "Marca, slides e materiais A9"
+  short_description: "Crie materiais com a cara da A9"
   default_prompt: "Use a skill A9 Educação para criar este material com a identidade e os padrões da A9."
   brand_color: "#6DFF30"
 policy:

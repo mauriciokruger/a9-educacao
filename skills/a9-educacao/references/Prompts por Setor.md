@@ -1,16 +1,20 @@
 # Prompts por Setor
 
-Biblioteca de aplicação para a rotina da A9 Educação. Os grupos abaixo organizam exemplos de uso; não representam um organograma oficial. Cada comando produz uma proposta ou rascunho para conferência.
+Use estes pedidos como ponto de partida para o trabalho na A9. Eles estão agrupados por tipo de atividade para facilitar a consulta. Cada resposta deve ser revisada antes de usar.
 
-Substitua os campos entre colchetes e forneça apenas os dados autorizados. A skill não conecta sistemas nem envia mensagens. Para criar peças visuais, acrescente o formato desejado; apresentações sem formato usam HTML navegável.
+Preencha os campos entre colchetes com as informações da tarefa. Compartilhe apenas o que você pode usar nesse trabalho. Para uma peça visual, diga qual formato deseja. Se não indicar o formato de uma apresentação, a skill usa HTML navegável. A skill não conecta sistemas nem envia mensagens.
 
 ## Comercial
 
 ### 1. Preparação de conversa
 
-**Objetivo** — organizar uma reunião com contexto.
+**Para que serve**
 
-**Entradas** — resumo autorizado do contato, objetivo e informações disponíveis.
+Organizar uma reunião com contexto.
+
+**O que você precisa reunir**
+
+Resumo autorizado do contato, objetivo e informações disponíveis.
 
 ```text
 Use a skill A9 Educação. Prepare uma conversa de [DURAÇÃO] com
@@ -20,15 +24,23 @@ abertas. Termine com um próximo passo sugerido. Não invente dores,
 orçamento, interesse ou promessa de resultado.
 ```
 
-**Saída esperada** — roteiro curto com fatos, perguntas e próximo passo.
+**O que a IA deve entregar**
 
-**Conferir** — informações atuais, perguntas úteis e ausência de suposições tratadas como fatos.
+Roteiro curto com fatos, perguntas e próximo passo.
+
+**O que conferir antes de usar**
+
+Informações atuais, perguntas úteis e ausência de suposições tratadas como fatos.
 
 ### 2. Proposta de treinamento
 
-**Objetivo** — estruturar uma proposta com escopo confirmado.
+**Para que serve**
 
-**Entradas** — necessidade, público, entregáveis e condições aprovadas.
+Estruturar uma proposta com escopo confirmado.
+
+**O que você precisa reunir**
+
+Necessidade, público, entregáveis e condições aprovadas.
 
 ```text
 Use a skill A9 Educação para preparar uma proposta de [TREINAMENTO]
@@ -38,15 +50,23 @@ Marque como pendente qualquer condição não fornecida. Use documento
 claro e legível. Não invente preço, desconto, garantia ou prazo.
 ```
 
-**Saída esperada** — proposta editável ou conteúdo estruturado no formato pedido.
+**O que a IA deve entregar**
 
-**Conferir** — escopo, valores e datas contra o briefing.
+Proposta editável ou conteúdo estruturado no formato pedido.
+
+**O que conferir antes de usar**
+
+Escopo, valores e datas contra o briefing.
 
 ### 3. Retomada de contato
 
-**Objetivo** — preparar uma mensagem pertinente.
+**Para que serve**
 
-**Entradas** — histórico resumido, canal e próximo passo desejado.
+Preparar uma mensagem pertinente.
+
+**O que você precisa reunir**
+
+Histórico resumido, canal e próximo passo desejado.
 
 ```text
 Use a skill A9 Educação. Escreva um rascunho de retomada de até
@@ -56,17 +76,25 @@ do histórico e faça um convite simples. Não invente urgência,
 disponibilidade, condições ou interesse. Não envie a mensagem.
 ```
 
-**Saída esperada** — uma mensagem pronta para revisar.
+**O que a IA deve entregar**
 
-**Conferir** — contexto, destinatário e utilidade do convite.
+Uma mensagem pronta para revisar.
+
+**O que conferir antes de usar**
+
+Contexto, destinatário e utilidade do convite.
 
 ## Marketing e Conteúdo
 
 ### 4. Briefing de campanha
 
-**Objetivo** — transformar informações em direção de conteúdo.
+**Para que serve**
 
-**Entradas** — produto, público, objetivo, canais e condições confirmadas.
+Transformar informações em direção de conteúdo.
+
+**O que você precisa reunir**
+
+Produto, público, objetivo, canais e condições confirmadas.
 
 ```text
 Use a skill A9 Educação. Prepare um briefing de campanha para
@@ -76,15 +104,23 @@ comprováveis, canais e ideias de peças. Liste lacunas que impedem
 publicação. Não invente depoimentos, datas, vagas ou resultados.
 ```
 
-**Saída esperada** — briefing com mensagem e peças propostas.
+**O que a IA deve entregar**
 
-**Conferir** — ligação entre público, benefício e evidência.
+Briefing com mensagem e peças propostas.
+
+**O que conferir antes de usar**
+
+Ligação entre público, benefício e evidência.
 
 ### 5. Carrossel
 
-**Objetivo** — comunicar uma ideia em sequência.
+**Para que serve**
 
-**Entradas** — assunto, público, quantidade e dados.
+Comunicar uma ideia em sequência.
+
+**O que você precisa reunir**
+
+Assunto, público, quantidade e dados.
 
 ```text
 Use a skill A9 Educação para criar um carrossel de [N] cards
@@ -94,15 +130,23 @@ no celular e termine com uma ação coerente. Use o design system A9.
 Se houver modelo aprovado [MODELO], preserve capa, fontes e rodapé.
 ```
 
-**Saída esperada** — roteiro e arte ou arquivo no formato pedido.
+**O que a IA deve entregar**
 
-**Conferir** — quantidade, clareza, margens e tamanho da fonte.
+Roteiro e arte ou arquivo no formato pedido.
+
+**O que conferir antes de usar**
+
+Quantidade, clareza, margens e tamanho da fonte.
 
 ### 6. Landing page
 
-**Objetivo** — apresentar uma oferta ou ação.
+**Para que serve**
 
-**Entradas** — briefing, objetivo da página, conteúdo e destino do CTA.
+Apresentar uma oferta ou ação.
+
+**O que você precisa reunir**
+
+Briefing, objetivo da página, conteúdo e destino do CTA.
 
 ```text
 Use a skill A9 Educação para criar uma landing page responsiva de
@@ -112,17 +156,25 @@ oficiais e um próximo passo dominante. Se faltarem datas, preços
 ou destino, indique a pendência. Não simule envio de formulário.
 ```
 
-**Saída esperada** — página ou protótipo funcional conforme pedido.
+**O que a IA deve entregar**
 
-**Conferir** — contraste, celular, links e funcionamento real do CTA.
+Página ou protótipo funcional conforme pedido.
+
+**O que conferir antes de usar**
+
+Contraste, celular, links e funcionamento real do CTA.
 
 ## CS e Atendimento
 
 ### 7. Boas-vindas
 
-**Objetivo** — orientar os primeiros passos.
+**Para que serve**
 
-**Entradas** — serviço contratado, sequência confirmada e canais.
+Orientar os primeiros passos.
+
+**O que você precisa reunir**
+
+Serviço contratado, sequência confirmada e canais.
 
 ```text
 Use a skill A9 Educação. Prepare um rascunho de boas-vindas para
@@ -132,15 +184,23 @@ buscar ajuda. Não inclua acessos, contatos ou compromissos que não
 foram fornecidos. Não envie e não crie contas.
 ```
 
-**Saída esperada** — orientação curta e checklist de entrada.
+**O que a IA deve entregar**
 
-**Conferir** — ordem, links e correspondência com o serviço contratado.
+Orientação curta e checklist de entrada.
+
+**O que conferir antes de usar**
+
+Ordem, links e correspondência com o serviço contratado.
 
 ### 8. Resposta de atendimento
 
-**Objetivo** — responder com clareza e encaminhamento.
+**Para que serve**
 
-**Entradas** — relato, contexto permitido e orientações vigentes.
+Responder com clareza e encaminhamento.
+
+**O que você precisa reunir**
+
+Relato, contexto permitido e orientações vigentes.
 
 ```text
 Use a skill A9 Educação. Prepare uma resposta para o relato [RELATO].
@@ -150,15 +210,23 @@ encaminhamento sugerido. Não prometa reembolso, desconto ou prazo
 sem confirmação. Não envie a mensagem.
 ```
 
-**Saída esperada** — resposta revisável e encaminhamento.
+**O que a IA deve entregar**
 
-**Conferir** — entendimento do problema e compromisso assumido.
+Resposta revisável e encaminhamento.
+
+**O que conferir antes de usar**
+
+Entendimento do problema e compromisso assumido.
 
 ### 9. Síntese de retornos
 
-**Objetivo** — encontrar padrões em feedbacks autorizados.
+**Para que serve**
 
-**Entradas** — retornos anonimizados e período.
+Encontrar padrões em feedbacks autorizados.
+
+**O que você precisa reunir**
+
+Retornos anonimizados e período.
 
 ```text
 Use a skill A9 Educação. Analise estes retornos anonimizados
@@ -168,17 +236,25 @@ percepção relatada de causa comprovada. Não exponha pessoas e não
 generalize para toda a base sem amostra suficiente.
 ```
 
-**Saída esperada** — temas, evidências e melhorias propostas.
+**O que a IA deve entregar**
 
-**Conferir** — contagem, amostra e preservação de anonimato.
+Temas, evidências e melhorias propostas.
+
+**O que conferir antes de usar**
+
+Contagem, amostra e preservação de anonimato.
 
 ## Educação e Consultoria
 
 ### 10. Roteiro de aula
 
-**Objetivo** — organizar aprendizado aplicável.
+**Para que serve**
 
-**Entradas** — tema, público, duração e objetivo.
+Organizar aprendizado aplicável.
+
+**O que você precisa reunir**
+
+Tema, público, duração e objetivo.
 
 ```text
 Use a skill A9 Educação. Prepare uma aula de [DURAÇÃO] sobre
@@ -188,15 +264,23 @@ Respeite a experiência profissional do público. Informe ferramentas
 necessárias e adapte a prática ao tempo disponível.
 ```
 
-**Saída esperada** — roteiro com tempo e atividade.
+**O que a IA deve entregar**
 
-**Conferir** — viabilidade da prática e entendimento esperado.
+Roteiro com tempo e atividade.
+
+**O que conferir antes de usar**
+
+Viabilidade da prática e entendimento esperado.
 
 ### 11. Apresentação de slides
 
-**Objetivo** — criar material para apresentar.
+**Para que serve**
 
-**Entradas** — tema, público, objetivo e fontes.
+Criar material para apresentar.
+
+**O que você precisa reunir**
+
+Tema, público, objetivo e fontes.
 
 ```text
 Use a skill A9 Educação para criar uma apresentação de [N] slides
@@ -206,15 +290,23 @@ Entregue HTML navegável com tela cheia e impressão de todos os slides
 em PDF. Não invente estatísticas ou citações.
 ```
 
-**Saída esperada** — apresentação com slides completos e impressão preparada.
+**O que a IA deve entregar**
 
-**Conferir** — roteiro, quantidade, tipografia e todas as páginas do PDF.
+Apresentação com slides completos e impressão preparada.
+
+**O que conferir antes de usar**
+
+Roteiro, quantidade, tipografia e todas as páginas do PDF.
 
 ### 12. Próxima conversa de consultoria
 
-**Objetivo** — preparar orientação a partir do encontro anterior.
+**Para que serve**
 
-**Entradas** — relato autorizado, pendências e objetivo.
+Preparar orientação a partir do encontro anterior.
+
+**O que você precisa reunir**
+
+Relato autorizado, pendências e objetivo.
 
 ```text
 Use a skill A9 Educação. Com base no relato [RELATO], prepare
@@ -225,17 +317,25 @@ fornecedor escolhido executa e mantém as soluções. Não marque práticas
 pendentes como concluídas.
 ```
 
-**Saída esperada** — guia de conversa e conferência.
+**O que a IA deve entregar**
 
-**Conferir** — continuidade, pendências e escopo da orientação.
+Guia de conversa e conferência.
+
+**O que conferir antes de usar**
+
+Continuidade, pendências e escopo da orientação.
 
 ## Eventos e Operações
 
 ### 13. Checklist de preparação
 
-**Objetivo** — tornar entregas e pendências visíveis.
+**Para que serve**
 
-**Entradas** — evento, data confirmada, atividades e responsáveis.
+Tornar entregas e pendências visíveis.
+
+**O que você precisa reunir**
+
+Evento, data confirmada, atividades e responsáveis.
 
 ```text
 Use a skill A9 Educação. Monte um checklist para [EVENTO],
@@ -245,15 +345,23 @@ pendências. Quando não houver responsável ou prazo, marque a definição
 necessária. Não considere reservas ou fornecedores confirmados sem fonte.
 ```
 
-**Saída esperada** — checklist com responsáveis e prazos confirmados ou pendentes.
+**O que a IA deve entregar**
 
-**Conferir** — dependências, sequência e origem das confirmações.
+Checklist com responsáveis e prazos confirmados ou pendentes.
+
+**O que conferir antes de usar**
+
+Dependências, sequência e origem das confirmações.
 
 ### 14. Orientação para participantes
 
-**Objetivo** — reduzir dúvidas sobre participação.
+**Para que serve**
 
-**Entradas** — local, horários, acesso e contatos confirmados.
+Reduzir dúvidas sobre participação.
+
+**O que você precisa reunir**
+
+Local, horários, acesso e contatos confirmados.
 
 ```text
 Use a skill A9 Educação. Prepare uma orientação para participantes
@@ -263,15 +371,23 @@ endereço, estacionamento, alimentação ou condição de acesso.
 Entregue rascunho para revisão, sem envio.
 ```
 
-**Saída esperada** — comunicação objetiva e lista de lacunas.
+**O que a IA deve entregar**
 
-**Conferir** — data, local, links e condições de acesso.
+Comunicação objetiva e lista de lacunas.
+
+**O que conferir antes de usar**
+
+Data, local, links e condições de acesso.
 
 ### 15. Registro de ocorrências
 
-**Objetivo** — organizar aprendizado operacional.
+**Para que serve**
 
-**Entradas** — ocorrências anonimizadas e providências conhecidas.
+Organizar aprendizado operacional.
+
+**O que você precisa reunir**
+
+Ocorrências anonimizadas e providências conhecidas.
 
 ```text
 Use a skill A9 Educação. Organize as ocorrências [REGISTROS]
@@ -281,17 +397,25 @@ causa ou responsabilidade individual sem base. Entregue uma síntese
 para reunião de operação.
 ```
 
-**Saída esperada** — fatos, providências e melhorias.
+**O que a IA deve entregar**
 
-**Conferir** — distinção entre o ocorrido e a interpretação.
+Fatos, providências e melhorias.
+
+**O que conferir antes de usar**
+
+Distinção entre o ocorrido e a interpretação.
 
 ## Financeiro e Administrativo
 
 ### 16. Conferência de demonstrativo
 
-**Objetivo** — organizar uma leitura gerencial.
+**Para que serve**
 
-**Entradas** — dados autorizados, período e significado das colunas.
+Organizar uma leitura gerencial.
+
+**O que você precisa reunir**
+
+Dados autorizados, período e significado das colunas.
 
 ```text
 Use a skill A9 Educação. Confira este demonstrativo autorizado
@@ -301,15 +425,23 @@ Separe valores previstos de realizados. Não invente lançamentos nem
 faça pagamentos ou alterações.
 ```
 
-**Saída esperada** — resumo com cálculos rastreáveis.
+**O que a IA deve entregar**
 
-**Conferir** — unidade, período, duplicidades e fórmulas.
+Resumo com cálculos rastreáveis.
+
+**O que conferir antes de usar**
+
+Unidade, período, duplicidades e fórmulas.
 
 ### 17. Minuta de cobrança
 
-**Objetivo** — preparar contato respeitoso para conferência humana.
+**Para que serve**
 
-**Entradas** — obrigação confirmada e dados mínimos autorizados.
+Preparar contato respeitoso para conferência humana.
+
+**O que você precisa reunir**
+
+Obrigação confirmada e dados mínimos autorizados.
 
 ```text
 Use a skill A9 Educação. Prepare uma minuta de cobrança para
@@ -319,15 +451,23 @@ sido pago. Não inclua dados bancários não fornecidos nem ofereça
 acordo ou desconto. Não envie a mensagem.
 ```
 
-**Saída esperada** — mensagem curta para revisão.
+**O que a IA deve entregar**
 
-**Conferir** — saldo, identificação da obrigação e pagamento recente.
+Mensagem curta para revisão.
+
+**O que conferir antes de usar**
+
+Saldo, identificação da obrigação e pagamento recente.
 
 ### 18. Procedimento administrativo
 
-**Objetivo** — documentar uma rotina repetida.
+**Para que serve**
 
-**Entradas** — descrição atual, papéis e exceções.
+Documentar uma rotina repetida.
+
+**O que você precisa reunir**
+
+Descrição atual, papéis e exceções.
 
 ```text
 Use a skill A9 Educação. Documente a rotina [ROTINA] com base
@@ -336,17 +476,25 @@ conferência e exceções conhecidas. Separe o procedimento atual das
 melhorias propostas. Não crie regra de aprovação ou obrigação nova.
 ```
 
-**Saída esperada** — procedimento claro e lista separada de melhorias.
+**O que a IA deve entregar**
 
-**Conferir** — correspondência com o processo real.
+Procedimento claro e lista separada de melhorias.
+
+**O que conferir antes de usar**
+
+Correspondência com o processo real.
 
 ## Pessoas e RH
 
 ### 19. Integração de equipe
 
-**Objetivo** — orientar uma chegada ou mudança de rotina.
+**Para que serve**
 
-**Entradas** — função, atividades e orientações confirmadas.
+Orientar uma chegada ou mudança de rotina.
+
+**O que você precisa reunir**
+
+Função, atividades e orientações confirmadas.
 
 ```text
 Use a skill A9 Educação. Prepare um guia de integração para
@@ -356,15 +504,23 @@ fornecidas. Não inclua dados pessoais, senhas, benefícios ou políticas
 não confirmadas.
 ```
 
-**Saída esperada** — guia de integração e pendências de informação.
+**O que a IA deve entregar**
 
-**Conferir** — acessos, responsáveis e regras atuais.
+Guia de integração e pendências de informação.
+
+**O que conferir antes de usar**
+
+Acessos, responsáveis e regras atuais.
 
 ### 20. Comunicação interna
 
-**Objetivo** — tornar um comunicado compreensível.
+**Para que serve**
 
-**Entradas** — decisão aprovada, público e ação esperada.
+Tornar um comunicado compreensível.
+
+**O que você precisa reunir**
+
+Decisão aprovada, público e ação esperada.
 
 ```text
 Use a skill A9 Educação. Redija um comunicado sobre [DECISÃO
@@ -373,15 +529,23 @@ acontece, quando e qual ação a pessoa deve tomar. Preserve o sentido
 da decisão e a privacidade. Não publique nem envie.
 ```
 
-**Saída esperada** — comunicado pronto para revisar.
+**O que a IA deve entregar**
 
-**Conferir** — decisão, prazo, público e próximo passo.
+Comunicado pronto para revisar.
+
+**O que conferir antes de usar**
+
+Decisão, prazo, público e próximo passo.
 
 ### 21. Perguntas frequentes
 
-**Objetivo** — organizar orientações já existentes.
+**Para que serve**
 
-**Entradas** — documentos aprovados e dúvidas anonimizadas.
+Organizar orientações já existentes.
+
+**O que você precisa reunir**
+
+Documentos aprovados e dúvidas anonimizadas.
 
 ```text
 Use a skill A9 Educação. Crie perguntas frequentes a partir de
@@ -390,17 +554,25 @@ fonte e o que fazer se o caso não estiver coberto. Não invente
 políticas, benefícios, obrigações ou decisões individuais.
 ```
 
-**Saída esperada** — FAQ com fonte e encaminhamento.
+**O que a IA deve entregar**
 
-**Conferir** — fidelidade às políticas atuais e dados pessoais removidos.
+FAQ com fonte e encaminhamento.
+
+**O que conferir antes de usar**
+
+Fidelidade às políticas atuais e dados pessoais removidos.
 
 ## Tecnologia e Produto
 
 ### 22. Briefing de ferramenta
 
-**Objetivo** — esclarecer um problema antes de construir.
+**Para que serve**
 
-**Entradas** — problema, usuários, exemplos e restrições.
+Esclarecer um problema antes de construir.
+
+**O que você precisa reunir**
+
+Problema, usuários, exemplos e restrições.
 
 ```text
 Use a skill A9 Educação. Estruture um briefing para uma ferramenta
@@ -410,15 +582,23 @@ e critérios de aceite. Diferencie requisito confirmado de proposta.
 Não invente integrações ou permissões.
 ```
 
-**Saída esperada** — briefing implementável com lacunas identificadas.
+**O que a IA deve entregar**
 
-**Conferir** — problema atendido e critérios observáveis.
+Briefing implementável com lacunas identificadas.
+
+**O que conferir antes de usar**
+
+Problema atendido e critérios observáveis.
 
 ### 23. Interface interna
 
-**Objetivo** — construir uma tela com padrão A9.
+**Para que serve**
 
-**Entradas** — briefing e contrato dos dados.
+Construir uma tela com padrão A9.
+
+**O que você precisa reunir**
+
+Briefing e contrato dos dados.
 
 ```text
 Use a skill A9 Educação para criar a interface de [TELA].
@@ -428,15 +608,23 @@ Se houver lista grande, use busca e paginação adequadas. Não simule
 persistência nem conecte o CRM sem solicitação.
 ```
 
-**Saída esperada** — interface no formato e stack pedidos.
+**O que a IA deve entregar**
 
-**Conferir** — teclado, responsividade, estados e ações reais.
+Interface no formato e stack pedidos.
+
+**O que conferir antes de usar**
+
+Teclado, responsividade, estados e ações reais.
 
 ### 24. Registro de problema
 
-**Objetivo** — tornar uma falha reproduzível.
+**Para que serve**
 
-**Entradas** — relato, comportamento esperado e evidências sem segredos.
+Tornar uma falha reproduzível.
+
+**O que você precisa reunir**
+
+Relato, comportamento esperado e evidências sem segredos.
 
 ```text
 Use a skill A9 Educação. Organize o problema [RELATO].
@@ -446,17 +634,25 @@ hipóteses a verificar. Separe hipótese de causa comprovada.
 Remova credenciais e dados pessoais. Não altere produção.
 ```
 
-**Saída esperada** — registro técnico claro.
+**O que a IA deve entregar**
 
-**Conferir** — reprodução, impacto e evidências suficientes.
+Registro técnico claro.
+
+**O que conferir antes de usar**
+
+Reprodução, impacto e evidências suficientes.
 
 ## Gestão e Liderança
 
 ### 25. Reunião de acompanhamento
 
-**Objetivo** — transformar informações em pauta de decisão.
+**Para que serve**
 
-**Entradas** — dados do período e decisões pendentes.
+Transformar informações em pauta de decisão.
+
+**O que você precisa reunir**
+
+Dados do período e decisões pendentes.
 
 ```text
 Use a skill A9 Educação. Prepare uma pauta de [DURAÇÃO] com
@@ -466,15 +662,23 @@ e prazo sugeridos, identificados como proposta quando não aprovados.
 Não invente metas ou decisões.
 ```
 
-**Saída esperada** — pauta curta e quadro de decisões.
+**O que a IA deve entregar**
 
-**Conferir** — origem dos números e distinção entre decisão e sugestão.
+Pauta curta e quadro de decisões.
+
+**O que conferir antes de usar**
+
+Origem dos números e distinção entre decisão e sugestão.
 
 ### 26. Comparação de alternativas
 
-**Objetivo** — apoiar uma escolha com critérios claros.
+**Para que serve**
 
-**Entradas** — alternativas, critérios e evidências disponíveis.
+Apoiar uma escolha com critérios claros.
+
+**O que você precisa reunir**
+
+Alternativas, critérios e evidências disponíveis.
 
 ```text
 Use a skill A9 Educação. Compare [ALTERNATIVAS] para [OBJETIVO].
@@ -483,15 +687,23 @@ limitações, custo confirmado e incertezas. Recomende uma opção com
 justificativa. Não invente pontuações, preços ou capacidades.
 ```
 
-**Saída esperada** — comparação rastreável e recomendação.
+**O que a IA deve entregar**
 
-**Conferir** — critérios equivalentes e lacunas que alteram a escolha.
+Comparação rastreável e recomendação.
+
+**O que conferir antes de usar**
+
+Critérios equivalentes e lacunas que alteram a escolha.
 
 ### 27. Plano de ação
 
-**Objetivo** — organizar próximos passos executáveis.
+**Para que serve**
 
-**Entradas** — objetivo, restrições e recursos confirmados.
+Organizar próximos passos executáveis.
+
+**O que você precisa reunir**
+
+Objetivo, restrições e recursos confirmados.
 
 ```text
 Use a skill A9 Educação. Proponha um plano para [OBJETIVO],
@@ -501,6 +713,10 @@ Priorize o que pode ser verificado. Não trate sugestões como decisões
 aprovadas e não crie tarefas em sistemas sem solicitação.
 ```
 
-**Saída esperada** — plano de ação com critério de conclusão.
+**O que a IA deve entregar**
 
-**Conferir** — dependências, capacidade e aprovação dos responsáveis.
+Plano de ação com critério de conclusão.
+
+**O que conferir antes de usar**
+
+Dependências, capacidade e aprovação dos responsáveis.

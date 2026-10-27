@@ -1,12 +1,12 @@
 # Design System
 
-Identidade A9 Educação · pacote 1.0.0 · referência visual A9 v2.0 de maio de 2026
+Identidade A9 Educação · pacote 1.0.1 · referência visual A9 v2.0 de maio de 2026
 
 ## Princípios
 
-Dark-first para apresentações e peças digitais. Navy forma a base, lime e ciano dão destaque. Fundos claros atendem propostas, contratos, impressão e necessidades de leitura.
+Use fundos escuros nas apresentações e peças digitais. O azul navy forma a base, com lime e ciano nos destaques. Para propostas, contratos e impressão, prefira fundos claros que facilitem a leitura.
 
-O design system oficial governa a identidade. Os padrões atuais do CRM complementam a experiência de sistemas. Materiais antigos ajudam a entender composição, mas não substituem as fontes e cores daqui.
+O design system oficial define nossa identidade. Os padrões atuais do CRM complementam a experiência de sistemas. Materiais antigos ajudam a entender composição, mas não substituem as fontes e cores daqui.
 
 Um pedido explícito do usuário ou seu modelo de referência orienta a entrega. Não impor a marca A9 a trabalhos de outras empresas.
 
@@ -39,7 +39,7 @@ Um pedido explícito do usuário ou seu modelo de referência orienta a entrega.
 | a9-warn | #FFB84A | Atenção |
 | a9-error | #FF5A5F | Erro ou destrutivo |
 
-Gradiente assinatura — linear-gradient(90deg, #6DFF30 0%, #29FFE8 100%). Usar em uma ou duas palavras-chave, número de destaque ou barra fina. Evitar corpo de texto e fundos inteiros em gradiente.
+O gradiente da marca vai de #6DFF30 a #29FFE8, na direção horizontal. Usar em uma ou duas palavras-chave, número de destaque ou barra fina. Evitar corpo de texto e fundos inteiros em gradiente.
 
 Não usar lime como texto pequeno sobre branco. Em materiais claros, usar navy para textos e lime como superfície ou acento. Estados precisam de rótulo ou ícone além da cor.
 
@@ -52,17 +52,17 @@ Não usar lime como texto pequeno sobre branco. Em materiais claros, usar navy p
 
 Os arquivos locais estão em assets/fonts. Use-os para HTML offline e em ferramentas que aceitem fontes locais. Em programas que dependem das fontes instaladas, orientar a instalação antes de apresentar ou editar.
 
-Fallback técnico de Poppins — Montserrat, system-ui, Segoe UI, sans-serif. Fallback de mono — ui-monospace, Consolas, monospace. Fallback não é escolha visual para a entrega final. Não substituir silenciosamente por Arial, Inter, Roboto, Manrope ou Space.
+Se Poppins não carregar, as alternativas técnicas são Montserrat, system-ui, Segoe UI e sans-serif. Para a fonte mono, use ui-monospace, Consolas ou monospace. Fallback não é escolha visual para a entrega final. Não substituir silenciosamente por Arial, Inter, Roboto, Manrope ou Space.
 
-Escala digital em pixels — 13, 15, 17, 20, 24, 32, 44, 60, 84, 112. Corpo usual em telas de leitura entre 15 e 17 px. Títulos de sistemas entre 24 e 32 px. Slides usam escala própria descrita no guia de apresentações.
+A escala digital usa os tamanhos 13, 15, 17, 20, 24, 32, 44, 60, 84 e 112 px. Corpo usual em telas de leitura entre 15 e 17 px. Títulos de sistemas entre 24 e 32 px. Slides usam escala própria descrita no guia de apresentações.
 
 Entrelinha de corpo entre 1,45 e 1,6. Títulos entre 1,05 e 1,15. Textos longos alinhados à esquerda e em fg-2 no dark. Números comparáveis usam tabular-nums.
 
 ## Espaçamento, raios e efeitos
 
-Base de espaçamento de 4 px — 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96 e 128.
+O espaçamento segue uma base de 4 px. Use 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96 ou 128 px.
 
-Raios — 4, 8, 14, 20, 28, 40 px e pill 9999 px. Em sistemas, inputs e botões com 8 px; cards conforme a densidade. Em peças editoriais, cards podem usar 20 a 24 px e botões pill.
+Os raios são de 4, 8, 14, 20, 28 ou 40 px. Para botões em formato de cápsula, use 9999 px. Em sistemas, campos e botões usam 8 px. Ajuste os cards à quantidade de conteúdo. Em peças editoriais, cards podem usar 20 a 24 px e botões pill.
 
 Sombras e glows estão nos tokens. Usar glow com moderação, no elemento âncora. Não criar efeito em todo texto ou componente.
 
@@ -70,7 +70,7 @@ Movimento rápido de 140 ms, base de 240 ms e entrada de 480 ms. Usar ease-out c
 
 ## Logo
 
-Usar os PNGs oficiais do pacote — a9-branco.png, a9-preto.png e a9-colorido.png. Branco em fundos navy; preto em fundos claros; colorido quando houver contraste.
+Use os PNGs oficiais a9-branco.png, a9-preto.png e a9-colorido.png. Escolha a logo branca para fundos navy e a preta para fundos claros. A colorida funciona quando houver contraste suficiente.
 
 Preservar proporção, transparência e área de respiro. Não recriar, distorcer, recolorir ou gerar a marca com IA. Não usar texto A9 como substituto da logo. Não colocar sobre fotografia sem contraste suficiente.
 
@@ -93,7 +93,7 @@ Interfaces do CRM usam Poppins, tokens navy e componentes consistentes. Para nov
 - Ações têm loading, estado desabilitado, retorno legível e erro contextual.
 - Inputs têm label, validação e formato adequado. Campos monetários e datas usam pt-BR.
 - Ícones de ação têm nome acessível e tooltip.
-- Cadastro e edição de entidades principais usam telas próprias; modais servem a tarefas auxiliares.
+- Cadastro e edição de entidades principais usam telas próprias. Reserve os modais para tarefas auxiliares.
 - Confirmar exclusões no componente da interface com explicação do impacto.
 - Listas grandes usam busca com debounce e paginação no backend. Não carregar uma base inteira apenas para paginar no navegador.
 - Usar a infraestrutura de acesso do produto. A skill não implementa nem substitui permissões.
@@ -112,7 +112,7 @@ Tabelas conservam unidade, período e origem. Não usar screenshots como substit
 
 HTML com container de até 600 px, parágrafos curtos, um CTA e alt text nas imagens. Incluir versão de texto e assunto quando solicitado.
 
-Preservar compatibilidade com clientes de e-mail. Poppins pode não carregar em alguns deles; declarar fallback robusto. Não prometer fidelidade tipográfica idêntica em todos os clientes. Assinaturas usam fundo claro, nome e contatos fornecidos.
+Preservar compatibilidade com clientes de e-mail. Poppins pode não carregar em alguns programas. Defina uma fonte alternativa adequada. Não prometer fidelidade tipográfica idêntica em todos os clientes. Assinaturas usam fundo claro, nome e contatos fornecidos.
 
 ## Redes sociais
 
@@ -122,10 +122,10 @@ Não converter automaticamente um modelo pessoal ou de um produto em regra unive
 
 ## Apresentações
 
-Seguir o guia Apresentações.md. O padrão é HTML navegável 16:9, usando o modelo autocontido incluído. Slides têm ritmo editorial e não recebem automaticamente o layout de um dashboard.
+Seguir o guia Apresentações.md. O padrão é HTML navegável 16 por 9, usando o modelo autocontido incluído. Slides têm ritmo editorial e não recebem automaticamente o layout de um dashboard.
 
 ## Recursos e procedência
 
-O arquivo assets/tokens/tokens.json é a fonte legível por máquina. tokens.css é gerado a partir dele pelo comando de construção do repositório. Conferir alterações contra esta referência antes de publicar uma versão.
+O arquivo assets/tokens/tokens.json reúne os valores usados no código. O comando de construção gera tokens.css a partir dele. Confira os valores deste guia antes de publicar uma versão.
 
-Fontes da identidade — [Design System oficial A9 v2.0](https://drive.google.com/file/d/14XdmHQ5KyhP0jPc9pCB_1vt9IkDqtkhj/view) e padrões de interface do CRM A9 consultados em 27/10/2026. Os materiais existentes foram usados somente como referência de composição, sem transportar dados operacionais.
+A identidade segue o [Design System oficial A9 v2.0](https://drive.google.com/file/d/14XdmHQ5KyhP0jPc9pCB_1vt9IkDqtkhj/view) e padrões de interface do CRM A9 consultados em 27/10/2026. Os materiais existentes foram usados somente como referência de composição, sem transportar dados operacionais.

@@ -1,9 +1,11 @@
 <!doctype html>
 <html lang="pt-BR"><meta charset="utf-8"><title>QA local A9</title>
 <body><p>Verificação local em andamento.</p>
-<iframe title="Apresentação em teste" src="../skills/a9-educacao/assets/apresentacoes/demo-a9.html" style="border:0;width:1280px;height:800px"></iframe>
+<iframe title="Apresentação em teste" style="border:0;width:1280px;height:800px"></iframe>
 <script>
 const frame=document.querySelector("iframe");
+const params=new URLSearchParams(location.search);
+const expectedSlides=Number(params.get("slides")||8);
 const results=[];
 function check(condition,name,detail){results.push({pass:!!condition,name,detail});}
 frame.addEventListener("load",async()=>{
@@ -11,13 +13,15 @@ frame.addEventListener("load",async()=>{
  const doc=frame.contentDocument,win=frame.contentWindow;
  await doc.fonts.ready;
  const slides=[...doc.querySelectorAll(".slide")];
- check(slides.length===8,"oito slides");
+ check(slides.length===expectedSlides,"quantidade de slides",slides.length);
  check(doc.fonts.check('700 60px "Poppins"'),"Poppins carregada");
  check(doc.fonts.check('400 24px "JetBrains Mono"'),"Mono carregada");
  for(const width of [1280,390]){
    frame.style.width=width+"px";frame.style.height="844px";
    await new Promise(resolve=>setTimeout(resolve,80));
-   for(let i=0;i<8;i++){
+   const indexes=[...doc.querySelectorAll("#jump button")];
+   check(indexes.every(button=>{const rect=button.getBoundingClientRect();return rect.width>=39&&rect.height>=43;}),"índice visível e clicável "+width);
+   for(let i=0;i<slides.length;i++){
      doc.querySelectorAll("#jump button")[i].click();
      await new Promise(resolve=>setTimeout(resolve,30));
      const active=doc.querySelector(".slide.active"),rect=active.getBoundingClientRect();
@@ -29,6 +33,15 @@ frame.addEventListener("load",async()=>{
      check(over.length===0,"sem cortes "+width+" slide "+(i+1),over);
      check(doc.body.scrollWidth<=win.innerWidth+1,"sem rolagem horizontal "+width+" slide "+(i+1));
    }
+ }
+ for(const width of [761,820,960,1024]){
+   frame.style.width=width+"px";
+   await new Promise(resolve=>setTimeout(resolve,80));
+   const clipped=[...doc.querySelectorAll(".controls button")].filter(button=>{
+     const rect=button.getBoundingClientRect();
+     return rect.width<1||rect.height<1||rect.left<0||rect.right>win.innerWidth+1||rect.bottom>win.innerHeight+1;
+   }).map(button=>button.getAttribute("aria-label")||button.textContent);
+   check(clipped.length===0,"controles inteiros em tablet "+width,clipped);
  }
  const dots=doc.querySelectorAll("#jump button");
  dots[0].click();
@@ -43,6 +56,15 @@ frame.addEventListener("load",async()=>{
  input.dispatchEvent(new win.KeyboardEvent("keydown",{key:"ArrowRight",bubbles:true}));
  check(doc.querySelector(".slide.active").querySelector("h1").id==="s1","atalho preserva input");
  input.remove();
+ for(const editableValue of ["","plaintext-only"]){
+   doc.querySelectorAll("#jump button")[0].click();
+   const editor=doc.createElement("div");editor.setAttribute("contenteditable",editableValue);
+   const child=doc.createElement("span");child.textContent="Texto em edição";editor.appendChild(child);doc.body.appendChild(editor);editor.focus();
+   child.dispatchEvent(new win.KeyboardEvent("keydown",{key:"ArrowRight",bubbles:true,cancelable:true}));
+   check(doc.querySelector(".slide.active").querySelector("h1")?.id==="s1","atalho preserva contenteditable "+(editableValue||"vazio"));
+   editor.remove();
+ }
+ doc.querySelectorAll("#jump button")[0].click();
  const space=new win.KeyboardEvent("keydown",{key:" ",bubbles:true,cancelable:true});
  const fullscreen=doc.querySelector("#fullscreen");fullscreen.focus();fullscreen.dispatchEvent(space);
  check(!space.defaultPrevented&&doc.querySelector(".slide.active").querySelector("h1")?.id==="s1","espaço preserva botão focado");
@@ -55,4 +77,5 @@ frame.addEventListener("load",async()=>{
  document.body.innerHTML="";
  const out=document.createElement("pre");out.id="qa-result";out.textContent=JSON.stringify(report,null,2);document.body.appendChild(out);
 });
+frame.src=params.get("deck")||"../skills/a9-educacao/assets/apresentacoes/demo-a9.html";
 </script></body></html>

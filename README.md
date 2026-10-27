@@ -1,14 +1,51 @@
-# A9 Educação
+![A9 Educação. Nossa identidade. Em cada criação.](docs/assets/a9-educacao-capa.png)
 
-Skill com identidade visual, apresentações e referências para a rotina da A9.
+<h1 align="center">A9 Educação · Skill de marca e criação</h1>
 
-**Versão 1.0.0** · Fontes e logos oficiais incluídas · Apresentações em HTML como padrão
+<p align="center">Apresentações, sites, documentos e conteúdo com a identidade da A9.<br>Um pacote com nossas fontes, cores, logos, referências e prompts para o trabalho.</p>
+
+<p align="center">
+  <a href="https://github.com/mauriciokruger/a9-educacao/releases/download/v1.0.1/a9-educacao-v1.0.1.zip"><img src="docs/assets/baixar-skill.png" width="230" alt="Baixar a skill v1.0.1"></a>
+  <a href="#instalação"><img src="docs/assets/como-instalar.png" width="230" alt="Como instalar"></a>
+  <a href="#exemplos-criados-com-a-skill"><img src="docs/assets/ver-exemplos.png" width="230" alt="Ver exemplos"></a>
+</p>
+
+<p align="center"><strong>v1.0.1</strong> · Poppins + JetBrains Mono · Logos oficiais · 27 prompts · HTML sem internet</p>
 
 Use no ChatGPT, Claude ou em ambientes locais compatíveis com Agent Skills. A instalação e os recursos disponíveis dependem da plataforma e da conta.
 
+## Sobre a skill
+
+Você conta o que precisa criar, para quem é o material e qual é o objetivo. A skill ajuda a IA a seguir as fontes, cores, logos e o jeito de comunicar da A9, sem precisar explicar tudo de novo em cada pedido.
+
+Ela reúne os guias da marca, modelos de apresentação e 27 pedidos prontos para adaptar à sua rotina. O resultado continua passando pela sua revisão antes de ser usado ou compartilhado.
+
+## Exemplos criados com a skill
+
+Uma apresentação de seis slides sobre como pedir materiais à IA, criada usando os arquivos da skill instalada. Fontes, logo, navegação e impressão estão no próprio HTML.
+
+[![Seis slides sobre pedido, contexto, formato, exemplo, revisão e próximo passo](docs/assets/slides-em-uso.png)](docs/exemplos/primeiro-pedido-a9.pdf)
+
+| Experimente | Arquivos |
+| --- | --- |
+| **Seu primeiro pedido com a A9**. Apresentação de seis slides | [Baixar HTML navegável](https://github.com/mauriciokruger/a9-educacao/releases/download/v1.0.1/primeiro-pedido-a9.html) · [Ver PDF](docs/exemplos/primeiro-pedido-a9.pdf) |
+| **Oficina de produtividade**. Landing page responsiva, fictícia | [Baixar HTML](https://github.com/mauriciokruger/a9-educacao/releases/download/v1.0.1/oficina-produtividade.html) |
+| **Biblioteca de composição**. Oito tipos de slide para adaptar | [Baixar HTML](https://github.com/mauriciokruger/a9-educacao/releases/download/v1.0.1/demo-a9.html) · [Ver PDF](docs/demo-a9.pdf) |
+
+<details>
+<summary>Ver a prévia da landing page</summary>
+
+![Landing page de oficina fictícia com navy, lime, ciano, Poppins e logo oficial A9](docs/assets/oficina-preview.png)
+
+O exemplo mantém data, investimento e inscrições como pendentes. Todos os dados são demonstrativos.
+
+</details>
+
+Baixe os HTMLs e abra no navegador. O GitHub mostra o código do arquivo. A apresentação interativa funciona depois do download. As fontes e a logo já estão incorporadas.
+
 ## Comece aqui
 
-1. [Baixe a skill pronta para instalar](https://github.com/mauriciokruger/a9-educacao/releases/download/v1.0.0/a9-educacao-v1.0.0.zip).
+1. [Baixe a skill pronta para instalar](https://github.com/mauriciokruger/a9-educacao/releases/download/v1.0.1/a9-educacao-v1.0.1.zip).
 2. Siga abaixo as instruções da sua plataforma.
 3. Abra uma conversa e peça um material.
 
@@ -29,15 +66,21 @@ Baixar o repositório não instala a skill. Para instalar, use o ZIP da release,
 | [Demonstração HTML](skills/a9-educacao/assets/apresentacoes/demo-a9.html) | Exemplo completo de oito slides com dados fictícios |
 | [Demonstração em PDF](docs/demo-a9.pdf) | Consulta rápida ao resultado de impressão |
 
-Para abrir um HTML localmente, baixe o arquivo e abra no navegador. A visualização de código do GitHub não executa a apresentação. [Arquivos da release](https://github.com/mauriciokruger/a9-educacao/releases/tag/v1.0.0) também incluem o HTML e o PDF separadamente.
+Para abrir um HTML localmente, baixe o arquivo e abra no navegador. A visualização de código do GitHub não executa a apresentação. [Arquivos da release](https://github.com/mauriciokruger/a9-educacao/releases/tag/v1.0.1) também incluem o HTML e o PDF separadamente.
+
+## Instalação
+
+Escolha onde você vai usar a skill. [ChatGPT](#instalar-no-chatgpt) · [Claude](#instalar-no-claude) · [Codex / Claude Code](#instalar-no-codex-ou-claude-code) · [Projeto com arquivos](#alternativa-com-arquivos-em-um-projeto).
+
+A instalação no **Codex foi testada neste computador**, com a skill reconhecida e usada para criar os exemplos acima. O upload nativo em ChatGPT e Claude ainda não foi testado. [Veja as verificações e os limites](docs/VALIDACAO.md).
 
 ## Instalar no ChatGPT
 
-Quando Skills estiver disponível na conta ou workspace:
+Se a sua conta tiver o recurso Skills, siga estes passos.
 
 1. Abra Plugins e a aba Skills.
 2. Selecione Create e Upload from your computer.
-3. Envie a9-educacao-v1.0.0.zip.
+3. Envie a9-educacao-v1.0.1.zip.
 4. Aguarde a análise do arquivo e conclua a instalação/habilitação apresentada.
 5. Abra uma conversa e selecione a skill com @ quando disponível, ou peça explicitamente seu uso.
 
@@ -52,7 +95,7 @@ Se o recurso não aparecer, use a alternativa por Projeto descrita abaixo. Não 
 1. Verifique se execução de código e criação de arquivos estão habilitadas na sua conta ou organização.
 2. Abra Customize / Skills.
 3. Clique em +, Create skill e Upload a skill.
-4. Envie a9-educacao-v1.0.0.zip sem descompactar.
+4. Envie a9-educacao-v1.0.1.zip sem descompactar.
 5. Habilite a skill e peça explicitamente seu uso na primeira conversa.
 
 Em Team ou Enterprise, a organização pode limitar criação e compartilhamento. Se o menu não existir, confira as configurações com quem administra o workspace.
@@ -72,7 +115,7 @@ No Windows, ~ representa sua pasta de usuário. Não mantenha cópias duplicadas
 
 No Codex, use $a9-educacao ou selecione em /skills. No Claude Code, confira a lista de skills e peça o uso de A9 Educação. Se uma instalação ou atualização não aparecer, reinicie o aplicativo ou a sessão.
 
-O Codex também oferece o instalador de skills. Depois de revisar o repositório, você pode pedir:
+O Codex também oferece um instalador. Depois de revisar o repositório, copie este pedido para instalar a skill.
 
 ```text
 Use o skill-installer para instalar a skill do repositório
@@ -94,24 +137,26 @@ Esta alternativa fica limitada ao Projeto e não equivale a uma skill instalada 
 Para materiais da A9 Educação, consulte Contexto e Regras e Design System.
 Para apresentações, consulte Apresentações e use o modelo HTML fornecido.
 Use Poppins, JetBrains Mono e as logos oficiais dos arquivos.
-Sem formato especificado, apresentações usam HTML navegável 16:9.
+Sem formato especificado, apresentações usam HTML navegável 16 por 9.
 Preserve o formato solicitado e não invente fatos ou condições comerciais.
 Se algum arquivo necessário não estiver acessível, informe a lacuna.
 Não aplique a marca A9 a tarefas sem relação com a empresa.
+Escreva de forma próxima e clara. Não use travessão, ponto e vírgula
+ou dois-pontos nos textos. Preserve a pontuação necessária no código.
 ```
 
 Se a plataforma não aceitar as fontes ou assets, o HTML demonstrativo continua autocontido. Para criar um novo material, poderá ser necessário anexar arquivos diretamente na conversa. Não prometa fidelidade de fonte quando a ferramenta não puder carregá-la.
 
 ## Usar em apresentações
 
-O padrão é HTML navegável com fontes e logo incorporadas, proporção 16:9 e impressão preparada. O arquivo funciona sem internet.
+O padrão é HTML navegável com fontes e logo incorporadas, proporção 16 por 9 e impressão preparada. O arquivo funciona sem internet.
 
 - Botões Anterior e Próximo e indicadores permitem navegar.
 - Setas, PageUp/PageDown, espaço, Home e End funcionam no teclado.
 - F ou o botão Tela cheia ativa o modo de apresentação.
 - Salvar PDF / imprimir abre a impressão. Escolha Salvar como PDF, paisagem, fundos ativados e cabeçalhos/rodapés do navegador desativados.
 
-Peça PowerPoint ou Google Slides quando precisar desses formatos. A skill orienta a criação; a ferramenta disponível na plataforma determina se o arquivo pode ser produzido. Não é necessário conectar o CRM.
+Peça PowerPoint ou Google Slides quando precisar desses formatos. A skill orienta a criação. A ferramenta disponível na plataforma determina se o arquivo pode ser produzido. Não é necessário conectar o CRM.
 
 Para editar PPTX em outro computador, instale as fontes de assets/fonts antes de abrir o arquivo. E-mails e alguns programas podem usar fallback por limitação do próprio aplicativo.
 
@@ -159,10 +204,10 @@ O primeiro comando gera os dois HTMLs, tokens.css, o ZIP em dist e SHA256SUMS.tx
 
 | Situação | O que conferir |
 | --- | --- |
-| A IA ignora a marca | Skill instalada e habilitada; peça explicitamente A9 Educação |
+| A IA ignora a marca | Skill instalada e habilitada. Peça explicitamente A9 Educação |
 | Skill não aparece | Disponibilidade, permissões do workspace e reinício da sessão |
 | Upload recusado | Use o ZIP da release, sem pasta extra do repositório |
-| Fonte diferente | Verifique suporte a fontes locais; instale as TTFs no editor |
+| Fonte diferente | Verifique suporte a fontes locais. Instale as TTFs no editor |
 | PDF mostra um slide | Use o HTML do pacote e confira a prévia com oito páginas na demonstração |
 | HTML aparece como código | Baixe o arquivo e abra no navegador |
 | Não acessa CRM ou Drive | A skill não inclui conectores nem permissões de acesso |

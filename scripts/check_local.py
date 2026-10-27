@@ -9,12 +9,13 @@ import re
 import subprocess
 import threading
 import time
+from urllib.parse import urlencode
 
 ROOT = Path(__file__).resolve().parents[1]
 WORK = ROOT / ".work"
 
 
-def run(chrome, mode):
+def run(chrome, mode, deck, expected_slides, pdf_output):
     WORK.mkdir(exist_ok=True)
     received = threading.Event()
     reports = []
@@ -37,12 +38,12 @@ def run(chrome, mode):
                "--force-prefers-reduced-motion=reduce", "--host-resolver-rules=MAP * ~NOTFOUND, EXCLUDE 127.0.0.1",
                "--user-data-dir=" + str(WORK / "chrome-qa")]
     if mode == "pdf":
-        command += ["--print-to-pdf="+str(ROOT/"docs/demo-a9.pdf"),
-                    base+"/skills/a9-educacao/assets/apresentacoes/demo-a9.html"]
+        command += ["--print-to-pdf="+str(ROOT/pdf_output), base+"/"+deck]
     else:
-        command += ["--dump-dom", "--virtual-time-budget=15000", base+"/scripts/qa.html"]
+        query = urlencode({"deck":"/"+deck,"slides":expected_slides})
+        command += ["--dump-dom", "--virtual-time-budget=15000", base+"/scripts/qa.html?"+query]
     try:
-        before = (ROOT/"docs/demo-a9.pdf").stat().st_mtime_ns if (ROOT/"docs/demo-a9.pdf").exists() else 0
+        before = (ROOT/pdf_output).stat().st_mtime_ns if (ROOT/pdf_output).exists() else 0
         result = subprocess.run(command, capture_output=True, timeout=60)
         if result.returncode:
             raise RuntimeError("Renderizador retornou erro "+str(result.returncode))
@@ -58,13 +59,13 @@ def run(chrome, mode):
         else:
             deadline = time.monotonic()+30
             while time.monotonic()<deadline:
-                pdf = ROOT/"docs/demo-a9.pdf"
+                pdf = ROOT/pdf_output
                 if pdf.exists() and pdf.stat().st_mtime_ns > before and pdf.stat().st_size > 10000:
                     break
                 time.sleep(.1)
             else:
                 raise RuntimeError("Exportação PDF não concluiu em 30s.")
-            print(ROOT/"docs/demo-a9.pdf")
+            print(ROOT/pdf_output)
     finally:
         server.shutdown()
         server.server_close()
@@ -74,5 +75,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--chrome", type=Path, required=True)
     parser.add_argument("--mode", choices=["test", "pdf"], default="test")
+    parser.add_argument("--deck", default="skills/a9-educacao/assets/apresentacoes/demo-a9.html", help="Caminho relativo ao repositório")
+    parser.add_argument("--expected-slides", type=int, default=8)
+    parser.add_argument("--pdf-output", default="docs/demo-a9.pdf", help="Caminho relativo ao repositório")
     options = parser.parse_args()
-    run(options.chrome, options.mode)
+    run(options.chrome, options.mode, options.deck, options.expected_slides, options.pdf_output)

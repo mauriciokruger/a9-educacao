@@ -1,12 +1,12 @@
 # Contexto e Regras
 
-Versão 1.0.0 · 27/10/2026
+Versão 1.0.1 · 27/10/2026
 
 ## Contexto institucional
 
 A A9 Educação atua com educação aplicada ao trabalho. Seu ecossistema inclui palestras, workshops, imersões, programas para empresas, mentorias e eventos. Os materiais devem conectar conhecimento, aplicação e resultado, com linguagem simples.
 
-Nome de marca em texto institucional — A9 Educação. Assinatura de posicionamento — Do conhecimento ao resultado.
+Nos textos institucionais, use o nome A9 Educação. Nossa assinatura é Do conhecimento ao resultado.
 
 Esta base reúne orientação pública para a rotina da equipe. Não é catálogo comercial atualizado, organograma, política de preços, contrato ou fonte de dados operacionais.
 
@@ -14,6 +14,8 @@ Esta base reúne orientação pública para a rotina da equipe. Não é catálog
 
 - Português do Brasil, direto, próximo e profissional.
 - Frases curtas, verbos concretos e uma ideia por parágrafo.
+- Escreva como quem conversa com uma pessoa. Prefira palavras comuns e exemplos que ajudem a entender o assunto.
+- Não use travessão, ponto e vírgula ou dois-pontos nos textos. Prefira ponto, vírgula ou uma nova frase. Preserve a pontuação necessária em código, endereços e arquivos técnicos.
 - Respeitar a experiência de cada profissão. Apresentar formas de apoiar o trabalho, sem insinuar que a pessoa desconhece sua função.
 - Explicar siglas quando forem novas para o público.
 - Preferir aplicar, método, resultado, IA aplicada, empresário, líder e gestor.
@@ -24,7 +26,7 @@ Não usar nomes, cargos, contatos, números de participantes ou credenciais de p
 
 ## Antes de criar
 
-Determinar objetivo, público, mensagem principal, informações disponíveis e entrega. Usar o briefing existente. Se faltar uma decisão essencial, perguntar de forma curta. Detalhes de rotina podem seguir os padrões deste pacote.
+Antes de começar, entenda quem vai usar o material, qual é o objetivo e o que precisa aparecer. Aproveite as informações do pedido. Se faltar uma decisão que impeça o trabalho, faça uma pergunta curta. Nos detalhes de rotina, siga os padrões deste pacote.
 
 Respeitar o formato solicitado. Apresentações sem indicação de formato usam HTML navegável. Quantidade de slides, páginas ou cards deve respeitar o pedido. Na ausência dessa quantidade, escolher conforme o conteúdo e informar a escolha.
 
