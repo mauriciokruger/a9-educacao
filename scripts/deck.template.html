@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>IA na rotina da equipe | A9 Educação</title>
+<!-- Fontes Poppins e JetBrains Mono sob OFL. Licenças em assets/fonts do pacote. Logo oficial A9. -->
+<style>
+{{FONT_CSS}}
+{{TOKENS_CSS}}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--a9-navy-deepest);color:var(--a9-fg-1);font-family:var(--a9-font-body)}
+body{overflow:hidden}
+button{font:500 14px "Poppins",sans-serif;cursor:pointer}
+button:focus-visible{outline:3px solid var(--a9-cyan);outline-offset:4px}
+.viewport{position:relative;height:calc(100svh - 82px);overflow:hidden}
+.stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform:translate(-50%,-50%) scale(var(--scale,0.5));transform-origin:center}
+.slide{display:none;position:relative;width:1920px;height:1080px;padding:56px 96px 116px;flex-direction:column;background:var(--a9-navy-900);overflow:hidden}
+.slide.active{display:flex;animation:arrive 240ms var(--a9-ease-out)}
+.slide.cover,.slide.divider,.slide.closing{background:var(--a9-navy-deepest)}
+.eyebrow{font-size:24px;line-height:1.4;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--a9-lime);margin:0 0 28px}
+.chapter{color:var(--a9-cyan);font-family:var(--a9-font-mono);font-size:24px}
+h1,h2,h3,p{margin:0}
+h1{font-size:84px;line-height:1.08;letter-spacing:-.02em;font-weight:700;max-width:1500px}
+h2{font-size:60px;line-height:1.15;letter-spacing:-.02em;font-weight:700;max-width:1560px}
+h3{font-size:36px;line-height:1.2;font-weight:600}
+p,li{font-size:30px;line-height:1.5;color:var(--a9-fg-2)}
+.lede{margin-top:30px;max-width:1400px;font-size:32px}
+.gradient{background:var(--a9-gradient);background-clip:text;-webkit-background-clip:text;color:transparent}
+.rule{height:4px;width:144px;background:var(--a9-gradient);margin:42px 0}
+.cover .center,.divider .center,.closing .center{margin:auto 0}
+.tag{font-size:24px;color:var(--a9-fg-3);margin-top:44px}
+.footer{position:absolute;left:96px;right:96px;bottom:36px;display:flex;justify-content:space-between;align-items:center;gap:40px;border-top:1px solid var(--a9-navy-600);padding-top:22px;font-size:24px;color:var(--a9-fg-3)}
+.footer img{width:160px;height:auto;max-height:46px;object-fit:contain}
+.page{font:400 24px var(--a9-font-mono);font-variant-numeric:tabular-nums}
+.content{margin-top:70px}
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:54px}
+.steps.content{margin-top:70px}
+.steps li{border-top:2px solid var(--a9-navy-600);padding-top:28px}
+.steps .n{display:block;color:var(--a9-cyan);font:600 28px var(--a9-font-mono);margin-bottom:24px}
+.steps p{margin-top:22px}
+.metric{font-size:176px;font-weight:900;line-height:1.05;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.metric-block{display:flex;gap:100px;align-items:center}
+.metric-text{max-width:800px}
+.metric-text p{margin-top:22px}
+.note{font-size:24px;color:var(--a9-fg-3);margin-top:38px}
+.comparison{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.comparison article{border-top:3px solid var(--a9-navy-600);padding-top:28px}
+.comparison article:last-child{border-top-color:var(--a9-lime)}
+.comparison h3{margin-bottom:26px}
+.comparison p+p{margin-top:22px}
+.chart{max-width:1450px;margin-top:48px}
+.chart-row{display:grid;grid-template-columns:220px 1fr 100px;gap:30px;align-items:center;margin-top:28px;font-size:28px}
+.track{height:42px;background:var(--a9-navy-700);border-radius:4px;overflow:hidden}
+.bar{height:100%;background:var(--a9-cyan);width:var(--value)}
+.chart-row:last-child .bar{background:var(--a9-lime)}
+.value{font-family:var(--a9-font-mono);font-size:28px}
+.quote{margin:76px 0 0;max-width:1500px;border-left:5px solid var(--a9-lime);padding:10px 0 10px 44px}
+.quote p{font-size:48px;line-height:1.4;color:var(--a9-fg-1);font-weight:500}
+.quote cite{display:block;margin-top:38px;font-size:26px;font-style:normal;color:var(--a9-fg-3)}
+.closing h2{font-size:84px;line-height:1.12;max-width:1500px}
+.closing .next{margin-top:48px;color:var(--a9-cyan);font-size:32px}
+.controls{height:82px;display:flex;justify-content:center;align-items:center;gap:14px;padding:14px 20px;background:var(--a9-navy-deepest)}
+.controls button{border:1px solid var(--a9-navy-600);background:var(--a9-navy-800);color:white;min-height:44px;border-radius:8px;padding:8px 16px}
+.controls button:hover{border-color:var(--a9-cyan)}
+.controls button:disabled{opacity:.35;cursor:default}
+.controls .primary{background:var(--a9-lime);color:var(--a9-fg-on-lime);border-color:var(--a9-lime)}
+.counter{min-width:72px;text-align:center;font:400 14px "JetBrains Mono",monospace}
+.jump{display:flex;gap:5px}
+.jump button{padding:0;min-height:14px;width:14px;border-radius:50%;background:var(--a9-navy-600);border:0}
+.jump button[aria-current="step"]{background:var(--a9-lime)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@keyframes arrive{from{opacity:.5;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media screen and (max-width:760px){
+body{overflow:auto}.viewport{height:auto;min-height:calc(100svh - 140px);overflow:visible}
+.stage{position:static;transform:none;width:100%;height:auto}
+.slide{width:100%;height:auto;min-height:calc(100svh - 140px);padding:36px 24px 150px;overflow:visible}
+.eyebrow{font-size:16px;margin-bottom:24px}h1{font-size:44px}h2{font-size:36px}h3{font-size:28px}
+p,li,.lede{font-size:24px}.lede{margin-top:24px}.tag,.chapter{font-size:18px}
+.footer{left:24px;right:24px;bottom:28px;font-size:16px;gap:20px}.footer img{width:112px}.page{font-size:16px}
+.content{margin-top:40px}.steps,.comparison{grid-template-columns:1fr;gap:32px}
+.steps.content{margin-top:40px}
+.steps .n{font-size:22px;margin-bottom:14px}.steps p{margin-top:12px}
+.metric-block{display:block}.metric{font-size:100px}.metric-text{margin-top:24px}
+.note{font-size:18px;margin-top:28px}.chart-row{grid-template-columns:1fr 62px;gap:12px;font-size:20px}
+.chart-row .track{grid-column:1/-1;grid-row:auto;height:28px}.chart-row .value{grid-column:2;grid-row:auto;font-size:20px}
+.chart-row .label{grid-column:1}.chart-row{display:flex;flex-wrap:wrap}.chart-row .label{flex:1}.chart-row .track{order:3;width:100%}
+.quote{margin-top:42px;padding-left:24px}.quote p{font-size:30px}.quote cite{font-size:20px}
+.closing h2{font-size:44px}.closing .next{font-size:24px}
+.controls{height:auto;min-height:124px;position:relative;flex-wrap:wrap;gap:10px;padding:16px 12px}
+.controls button{font-size:12px;padding:8px 10px}.jump{display:none}
+}
+@page{size:20in 11.25in;margin:0}
+@media print{
+html,body{width:20in;height:auto;overflow:visible;background:var(--a9-navy-900);print-color-adjust:exact;-webkit-print-color-adjust:exact}
+body .viewport{position:static;display:block;width:20in;height:auto;overflow:visible}
+body .stage{position:static;width:1920px;height:auto;transform:none}
+body .slide{display:flex!important;position:relative;width:1920px;height:1080px;min-height:0;padding:56px 96px 116px;overflow:hidden;break-after:page;page-break-after:always;animation:none!important}
+body .slide:last-child{break-after:auto;page-break-after:auto}
+body .slide .footer{left:96px;right:96px;bottom:36px}
+body .controls,body .sr-only{display:none!important}
+body .gradient{background:none;color:var(--a9-lime)}
+}
+</style>
+</head>
+<body>
+<main class="viewport" id="viewport" aria-label="Apresentação A9 Educação">
+<div class="stage" id="stage">
+<section class="slide cover active" aria-labelledby="s1">
+ <p class="eyebrow">A9 Educação · Demonstração do padrão A9</p>
+ <div class="center"><h1 id="s1">IA na rotina<br>da <span class="gradient">equipe</span></h1><div class="rule"></div><p class="lede">Uma tarefa real. Um pedido claro. Uma revisão cuidadosa.</p><p class="tag">Modelo visual · Todos os exemplos são fictícios</p></div>
+ <footer class="footer"><span>Do conhecimento ao resultado</span><span class="page">01 / 08</span></footer>
+</section>
+<section class="slide divider" aria-labelledby="s2">
+ <div class="center"><p class="eyebrow">Capítulo 01</p><h2 id="s2">Comece por uma<br><span class="gradient">tarefa concreta</span></h2><div class="rule"></div><p class="lede">Escolha uma atividade recorrente cujo resultado você saiba conferir.</p></div>
+ <footer class="footer"><span>A9 Educação · IA na rotina</span><span class="page">02 / 08</span></footer>
+</section>
+<section class="slide" aria-labelledby="s3">
+ <p class="eyebrow">Conteúdo · Método</p><h2 id="s3">Três passos para um pedido claro</h2>
+ <ol class="steps content"><li><span class="n">01</span><h3>Contexto</h3><p>Explique a situação, o público e o objetivo.</p></li><li><span class="n">02</span><h3>Entrega</h3><p>Diga o que precisa receber e em qual formato.</p></li><li><span class="n">03</span><h3>Conferência</h3><p>Defina como reconhecer uma resposta útil.</p></li></ol>
+ <footer class="footer"><span class="page">03 / 08</span><img src="{{LOGO_WHITE}}" alt="A9 Educação"></footer>
+</section>
+<section class="slide" aria-labelledby="s4">
+ <p class="eyebrow">KPI · Exemplo fictício</p><h2 id="s4">Acompanhe o que foi revisado</h2>
+ <div class="metric-block content"><div class="metric gradient">72%</div><div class="metric-text"><h3>Respostas conferidas</h3><p>72 de 100 respostas passaram pela revisão prevista nesta simulação.</p><p class="note">Período demonstrativo · Semana 4<br>Fonte · Dados fictícios para mostrar o layout</p></div></div>
+ <footer class="footer"><span class="page">04 / 08</span><img src="{{LOGO_WHITE}}" alt="A9 Educação"></footer>
+</section>
+<section class="slide" aria-labelledby="s5">
+ <p class="eyebrow">Comparação · Instruções</p><h2 id="s5">Do pedido genérico ao contexto útil</h2>
+ <div class="comparison content"><article><h3>Pedido aberto</h3><p>“Faça um resumo.”</p><p>Não informa público, objetivo nem formato esperado.</p></article><article><h3>Pedido com contexto</h3><p>“Resuma estas anotações para a reunião da equipe. Separe decisões, pendências e próximos passos em uma página.”</p></article></div>
+ <footer class="footer"><span class="page">05 / 08</span><img src="{{LOGO_WHITE}}" alt="A9 Educação"></footer>
+</section>
+<section class="slide" aria-labelledby="s6">
+ <p class="eyebrow">Gráfico · Exemplo fictício</p><h2 id="s6">Respostas revisadas por semana</h2><p class="lede">Percentual sobre 100 respostas em cada semana da simulação.</p>
+ <div class="chart" role="img" aria-label="Dados fictícios. Semana 1, 40 por cento. Semana 2, 55 por cento. Semana 3, 65 por cento. Semana 4, 72 por cento.">
+ <div class="chart-row"><span class="label">Semana 1</span><div class="track"><div class="bar" style="--value:40%"></div></div><span class="value">40%</span></div>
+ <div class="chart-row"><span class="label">Semana 2</span><div class="track"><div class="bar" style="--value:55%"></div></div><span class="value">55%</span></div>
+ <div class="chart-row"><span class="label">Semana 3</span><div class="track"><div class="bar" style="--value:65%"></div></div><span class="value">65%</span></div>
+ <div class="chart-row"><span class="label">Semana 4</span><div class="track"><div class="bar" style="--value:72%"></div></div><span class="value">72%</span></div>
+ </div><p class="note">Fonte · Dados fictícios para demonstrar composição e rótulos</p>
+ <footer class="footer"><span class="page">06 / 08</span><img src="{{LOGO_WHITE}}" alt="A9 Educação"></footer>
+</section>
+<section class="slide" aria-labelledby="s7">
+ <p class="eyebrow">Citação · Exemplo de composição</p><h2 id="s7">A revisão faz parte do trabalho</h2>
+ <blockquote class="quote"><p>“A resposta fica útil quando confiro os fatos e adapto o resultado ao meu contexto.”</p><cite>Fala fictícia criada para esta demonstração<br>Sem atribuição a uma pessoa real</cite></blockquote>
+ <footer class="footer"><span class="page">07 / 08</span><img src="{{LOGO_WHITE}}" alt="A9 Educação"></footer>
+</section>
+<section class="slide closing" aria-labelledby="s8">
+ <p class="eyebrow">Do conhecimento ao resultado</p><div class="center"><h2 id="s8">Escolha uma tarefa.<br><span class="gradient">Aplique. Confira.</span></h2><div class="rule"></div><p class="lede">Registre o que funcionou e ajuste o próximo pedido.</p><p class="next">Próximo passo · Uma prática na sua rotina</p></div>
+ <footer class="footer"><span>A9 Educação · Material demonstrativo</span><span class="page">08 / 08</span></footer>
+</section>
+</div>
+</main>
+<nav class="controls" aria-label="Controles da apresentação">
+ <button id="prev" type="button" aria-label="Slide anterior">← Anterior</button>
+ <output class="counter" id="counter" aria-label="Slide atual">01 / 08</output>
+ <div class="jump" id="jump" aria-label="Ir para slide"></div>
+ <button id="next" type="button" aria-label="Próximo slide">Próximo →</button>
+ <button id="fullscreen" type="button">Tela cheia · F</button>
+ <button class="primary" id="print" type="button">Salvar PDF / imprimir</button>
+</nav>
+<p class="sr-only" id="status" role="status" aria-live="polite"></p>
+<script>
+(function(){
+ "use strict";
+ const slides=Array.from(document.querySelectorAll(".slide"));
+ const stage=document.getElementById("stage");
+ const viewport=document.getElementById("viewport");
+ const prev=document.getElementById("prev");
+ const next=document.getElementById("next");
+ const counter=document.getElementById("counter");
+ const status=document.getElementById("status");
+ const jump=document.getElementById("jump");
+ const fsButton=document.getElementById("fullscreen");
+ const dots=[];
+ let current=0;
+ slides.forEach((slide,i)=>{
+   slide.setAttribute("role","group");
+   slide.setAttribute("aria-roledescription","slide");
+   const button=document.createElement("button");
+   button.type="button";button.setAttribute("aria-label","Ir para slide "+(i+1));
+   button.addEventListener("click",()=>show(i));
+   jump.appendChild(button);dots.push(button);
+ });
+ function show(index){
+   current=Math.max(0,Math.min(slides.length-1,index));
+   slides.forEach((slide,i)=>{
+     slide.classList.toggle("active",i===current);
+     slide.inert=i!==current;
+     slide.setAttribute("aria-hidden",String(i!==current));
+     if(i===current){dots[i].setAttribute("aria-current","step");}else{dots[i].removeAttribute("aria-current");}
+   });
+   counter.textContent=String(current+1).padStart(2,"0")+" / "+String(slides.length).padStart(2,"0");
+   prev.disabled=current===0;next.disabled=current===slides.length-1;
+   status.textContent="Slide "+(current+1)+" de "+slides.length+". "+slides[current].querySelector("h1,h2").textContent;
+   if(window.matchMedia("(max-width:760px)").matches){window.scrollTo({top:0,behavior:"instant"});}
+ }
+ function fit(){stage.style.setProperty("--scale",Math.min(viewport.clientWidth/1920,viewport.clientHeight/1080));}
+ async function fullscreen(){
+   try{
+     if(document.fullscreenElement){await document.exitFullscreen();}
+     else if(document.documentElement.requestFullscreen){await document.documentElement.requestFullscreen();}
+     else{status.textContent="Tela cheia indisponível neste navegador.";}
+   }catch(error){status.textContent="Não foi possível ativar tela cheia. Use o controle do navegador.";}
+ }
+ prev.addEventListener("click",()=>show(current-1));
+ next.addEventListener("click",()=>show(current+1));
+ fsButton.addEventListener("click",fullscreen);
+ document.getElementById("print").addEventListener("click",()=>window.print());
+ document.addEventListener("keydown",event=>{
+   if(event.target.closest("input,textarea,select,[contenteditable=true]")||event.altKey||event.ctrlKey||event.metaKey){return;}
+   if(["ArrowRight","PageDown"," "].includes(event.key)){event.preventDefault();show(current+1);}
+   else if(["ArrowLeft","PageUp"].includes(event.key)){event.preventDefault();show(current-1);}
+   else if(event.key==="Home"){event.preventDefault();show(0);}
+   else if(event.key==="End"){event.preventDefault();show(slides.length-1);}
+   else if(event.key.toLowerCase()==="f"){event.preventDefault();fullscreen();}
+ });
+ window.addEventListener("resize",fit);
+ document.addEventListener("fullscreenchange",()=>{
+   fsButton.textContent=document.fullscreenElement?"Sair da tela cheia":"Tela cheia · F";fit();
+ });
+ window.addEventListener("beforeprint",()=>slides.forEach(slide=>{slide.inert=false;slide.removeAttribute("aria-hidden");}));
+ window.addEventListener("afterprint",()=>show(current));
+ show(0);fit();
+})();
+</script>
+</body>
+</html>

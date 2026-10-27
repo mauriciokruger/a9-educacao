@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.png binary
+*.ttf binary
+*.pdf binary
+skills/a9-educacao/assets/fonts/*-OFL.txt -whitespace

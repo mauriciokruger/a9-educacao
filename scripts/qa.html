@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR"><meta charset="utf-8"><title>QA local A9</title>
+<body><p>Verificação local em andamento.</p>
+<iframe title="Apresentação em teste" src="../skills/a9-educacao/assets/apresentacoes/demo-a9.html" style="border:0;width:1280px;height:800px"></iframe>
+<script>
+const frame=document.querySelector("iframe");
+const results=[];
+function check(condition,name,detail){results.push({pass:!!condition,name,detail});}
+frame.addEventListener("load",async()=>{
+ try{
+ const doc=frame.contentDocument,win=frame.contentWindow;
+ await doc.fonts.ready;
+ const slides=[...doc.querySelectorAll(".slide")];
+ check(slides.length===8,"oito slides");
+ check(doc.fonts.check('700 60px "Poppins"'),"Poppins carregada");
+ check(doc.fonts.check('400 24px "JetBrains Mono"'),"Mono carregada");
+ for(const width of [1280,390]){
+   frame.style.width=width+"px";frame.style.height="844px";
+   await new Promise(resolve=>setTimeout(resolve,80));
+   for(let i=0;i<8;i++){
+     doc.querySelectorAll("#jump button")[i].click();
+     await new Promise(resolve=>setTimeout(resolve,30));
+     const active=doc.querySelector(".slide.active"),rect=active.getBoundingClientRect();
+     const footer=active.querySelector(".footer").getBoundingClientRect();
+     const over=[...active.querySelectorAll("h1,h2,h3,p,li,.quote,.chart")].filter(el=>{
+       const r=el.getBoundingClientRect();
+       return r.left<rect.left-1||r.right>rect.right+1||r.top<rect.top-1||r.bottom>footer.top+1;
+     }).map(el=>el.tagName+":"+el.textContent.slice(0,35));
+     check(over.length===0,"sem cortes "+width+" slide "+(i+1),over);
+     check(doc.body.scrollWidth<=win.innerWidth+1,"sem rolagem horizontal "+width+" slide "+(i+1));
+   }
+ }
+ const dots=doc.querySelectorAll("#jump button");
+ dots[0].click();
+ check(doc.querySelector("#prev").disabled,"limite inicial");
+ win.document.body.dispatchEvent(new win.KeyboardEvent("keydown",{key:"ArrowRight",bubbles:true}));
+ check(doc.querySelector(".slide.active").querySelector("h2").id==="s2","seta direita");
+ win.document.body.dispatchEvent(new win.KeyboardEvent("keydown",{key:"End",bubbles:true}));
+ check(doc.querySelector("#next").disabled,"End e limite final");
+ win.document.body.dispatchEvent(new win.KeyboardEvent("keydown",{key:"Home",bubbles:true}));
+ check(doc.querySelector(".slide.active").querySelector("h1").id==="s1","Home");
+ const input=doc.createElement("input");doc.body.appendChild(input);input.focus();
+ input.dispatchEvent(new win.KeyboardEvent("keydown",{key:"ArrowRight",bubbles:true}));
+ check(doc.querySelector(".slide.active").querySelector("h1").id==="s1","atalho preserva input");
+ input.remove();
+ const external=win.performance.getEntriesByType("resource").filter(e=>!e.name.startsWith("data:")&&!e.name.startsWith(location.origin));
+ check(external.length===0,"sem dependências externas",external.map(e=>e.name));
+ check(win.getComputedStyle(doc.querySelector(".slide")).animationName==="none","movimento reduzido");
+ }catch(error){check(false,"exceção",String(error));}
+ const report={passed:results.every(r=>r.pass),checks:results};
+ await fetch("/qa-result",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(report)});
+ document.body.innerHTML="";
+ const out=document.createElement("pre");out.id="qa-result";out.textContent=JSON.stringify(report,null,2);document.body.appendChild(out);
+});
+</script></body></html>
