@@ -43,6 +43,9 @@ frame.addEventListener("load",async()=>{
  input.dispatchEvent(new win.KeyboardEvent("keydown",{key:"ArrowRight",bubbles:true}));
  check(doc.querySelector(".slide.active").querySelector("h1").id==="s1","atalho preserva input");
  input.remove();
+ const space=new win.KeyboardEvent("keydown",{key:" ",bubbles:true,cancelable:true});
+ const fullscreen=doc.querySelector("#fullscreen");fullscreen.focus();fullscreen.dispatchEvent(space);
+ check(!space.defaultPrevented&&doc.querySelector(".slide.active").querySelector("h1")?.id==="s1","espaço preserva botão focado");
  const external=win.performance.getEntriesByType("resource").filter(e=>!e.name.startsWith("data:")&&!e.name.startsWith(location.origin));
  check(external.length===0,"sem dependências externas",external.map(e=>e.name));
  check(win.getComputedStyle(doc.querySelector(".slide")).animationName==="none","movimento reduzido");

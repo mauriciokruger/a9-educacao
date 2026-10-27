@@ -211,6 +211,7 @@ body .gradient{background:none;color:var(--a9-lime)}
  document.getElementById("print").addEventListener("click",()=>window.print());
  document.addEventListener("keydown",event=>{
    if(event.target.closest("input,textarea,select,[contenteditable=true]")||event.altKey||event.ctrlKey||event.metaKey){return;}
+   if(event.key===" "&&event.target.closest('button,a[href],summary,[role="button"],[role="link"]')){return;}
    if(["ArrowRight","PageDown"," "].includes(event.key)){event.preventDefault();show(current+1);}
    else if(["ArrowLeft","PageUp"].includes(event.key)){event.preventDefault();show(current-1);}
    else if(event.key==="Home"){event.preventDefault();show(0);}

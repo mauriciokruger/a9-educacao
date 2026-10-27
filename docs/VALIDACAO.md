@@ -17,7 +17,7 @@ Realizada em 27/10/2026.
 - Poppins e JetBrains Mono carregadas no renderizador.
 - Todos os slides verificados para cortes e rolagem horizontal em larguras de 1280 e 390 px.
 - Navegação por índice, seta, Home e End e limites inicial/final verificados.
-- Atalhos preservam a digitação em inputs.
+- Atalhos preservam a digitação em inputs e a ativação de botões por espaço.
 - Movimento reduzido e ausência de dependências externas verificados.
 - PDF gerado pelo CSS de impressão do próprio HTML em Chrome isolado, com oito páginas 16:9.
 - Todas as páginas do PDF renderizadas e inspecionadas visualmente.
