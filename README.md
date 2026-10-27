@@ -5,9 +5,9 @@
 <p align="center">Apresentações, sites, documentos e conteúdo com a identidade da A9.<br>Um pacote com nossas fontes, cores, logos, referências e prompts para o trabalho.</p>
 
 <p align="center">
-  <a href="https://github.com/mauriciokruger/a9-educacao/releases/download/v1.0.1/a9-educacao-v1.0.1.zip"><img src="docs/assets/baixar-skill.png" width="230" alt="Baixar a skill v1.0.1"></a>
-  <a href="#instalação"><img src="docs/assets/como-instalar.png" width="230" alt="Como instalar"></a>
-  <a href="#exemplos-criados-com-a-skill"><img src="docs/assets/ver-exemplos.png" width="230" alt="Ver exemplos"></a>
+  <a href="https://github.com/mauriciokruger/a9-educacao/releases/download/v1.0.1/a9-educacao-v1.0.1.zip"><img src="docs/assets/botao-baixar-skill.png" width="240" alt="Baixar a skill v1.0.1"></a>
+  <a href="#instalação"><img src="docs/assets/botao-como-instalar.png" width="240" alt="Como instalar"></a>
+  <a href="#exemplos-criados-com-a-skill"><img src="docs/assets/botao-ver-exemplos.png" width="240" alt="Ver exemplos"></a>
 </p>
 
 <p align="center"><strong>v1.0.1</strong> · Poppins + JetBrains Mono · Logos oficiais · 27 prompts · HTML sem internet</p>

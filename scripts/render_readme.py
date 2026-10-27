@@ -41,7 +41,7 @@ def render(chrome):
                     image.load()
                     image.crop((0,0,1600,620)).save(out/"a9-educacao-capa.png",optimize=True)
                     for name,x in [("baixar-skill",40),("como-instalar",432),("ver-exemplos",824)]:
-                        image.crop((x,662,x+360,734)).save(out/(name+".png"),optimize=True)
+                        image.crop((x-12,654,x+372,742)).save(out/("botao-"+name+".png"),optimize=True)
                 break
             except OSError:
                 pass
