@@ -28,7 +28,7 @@ def render(chrome):
     source.write_text(html,"utf-8",newline="\n")
     screenshot = work/"art.png"
     before = screenshot.stat().st_mtime_ns if screenshot.exists() else 0
-    subprocess.run([str(chrome),"--headless=new","--disable-gpu","--hide-scrollbars",
+    subprocess.run([str(chrome),"--headless=new","--disable-gpu","--hide-scrollbars","--default-background-color=00000000",
                     "--no-first-run","--no-default-browser-check","--host-resolver-rules=MAP * ~NOTFOUND",
                     "--user-data-dir="+str(work/"profile"),"--force-device-scale-factor=1",
                     "--window-size=1600,776","--screenshot="+str(screenshot),source.as_uri()],
