@@ -1,4 +1,30 @@
-# Validação da versão 1.0.1
+# Validação da versão 1.1.0
+
+Realizada em 28/10/2026.
+
+## E-mails e assinaturas
+
+A versão anterior tinha orientações gerais de e-mail, mas não distribuía o modelo completo. Uma mensagem criada a partir dela ficou com um fechamento simples em lugar da assinatura configurada. Essa lacuna orientou a atualização.
+
+O pacote agora inclui o guia E-mails e Assinaturas, o modelo de e-mail, o bloco de assinatura e uma imagem demonstrativa para o lugar da foto. São 26 arquivos na skill. Nenhuma foto, assinatura ou informação pessoal real faz parte do pacote público.
+
+O teste do contrato dos modelos falhou antes da inclusão dos arquivos e passou depois. Ele verifica uma única assinatura por modelo, o espaço da foto, o texto alternativo e a resolução local das imagens.
+
+Uma avaliação independente usou a skill atualizada em três pedidos com dados demonstrativos.
+
+| Pedido | Resultado |
+| --- | --- |
+| E-mail com assinatura e foto já fornecidas | O bloco original foi preservado, uma única vez |
+| E-mail sem assinatura ou foto disponíveis | O corpo foi preparado e os dados ausentes foram solicitados |
+| E-mail com pedido explícito para retirar a assinatura | A versão foi criada sem a assinatura pessoal |
+
+O modelo foi renderizado e inspecionado em uma janela larga e em uma janela de conteúdo de 390 px, com carregamento local da logo e da imagem de exemplo. Os seis testes do repositório passaram.
+
+A assinatura com foto e os padrões de novas mensagens e respostas foram conferidos em uma conta Gmail. As configurações existentes foram preservadas. A mensagem de referência já tinha sido enviada e não foi alterada.
+
+Os testes locais do modelo não comprovam entrega em todos os programas de e-mail. Uma assinatura fornecida por CID depende do anexo correspondente na mensagem real. A imagem de exemplo do pacote precisa ser substituída pela foto autorizada de quem vai enviar.
+
+## Histórico da versão 1.0.1
 
 Realizada em 27/10/2026.
 

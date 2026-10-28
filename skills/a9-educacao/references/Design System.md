@@ -1,6 +1,6 @@
 # Design System
 
-Identidade A9 Educação · pacote 1.0.1 · referência visual A9 v2.0 de maio de 2026
+Identidade A9 Educação · pacote 1.1.0 · referência visual A9 v2.0 de maio de 2026
 
 ## Princípios
 
@@ -110,9 +110,11 @@ Tabelas conservam unidade, período e origem. Não usar screenshots como substit
 
 ## E-mail
 
-HTML com container de até 600 px, parágrafos curtos, um CTA e alt text nas imagens. Incluir versão de texto e assunto quando solicitado.
+Use o [guia de e-mails e assinaturas](E-mails%20e%20Assinaturas.md) e o modelo em assets/emails/modelo-a9.html. O padrão tem cabeçalho navy com a logo branca, detalhe lime, corpo claro e um botão principal. A largura máxima é de 600 px.
 
-Preservar compatibilidade com clientes de e-mail. Poppins pode não carregar em alguns programas. Defina uma fonte alternativa adequada. Não prometer fidelidade tipográfica idêntica em todos os clientes. Assinaturas usam fundo claro, nome e contatos fornecidos.
+Use parágrafos curtos e inclua a assinatura com foto no final por padrão. Preserve a assinatura já configurada de quem está escrevendo. A pessoa pode pedir para removê-la.
+
+Poppins pode não carregar em alguns programas. Declare Arial, Helvetica e sans-serif como alternativas. Use tabelas e estilos no próprio elemento para manter a compatibilidade. Confira as imagens na mensagem salva.
 
 ## Redes sociais
 

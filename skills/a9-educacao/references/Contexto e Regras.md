@@ -1,6 +1,6 @@
 # Contexto e Regras
 
-Versão 1.0.1 · 27/10/2026
+Versão 1.1.0 · 27/10/2026
 
 ## Contexto institucional
 

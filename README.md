@@ -5,12 +5,12 @@
 <p align="center">Apresentações, sites, documentos e conteúdo com a identidade da A9.<br>Um pacote com nossas fontes, cores, logos, referências e prompts para o trabalho.</p>
 
 <p align="center">
-  <a href="https://github.com/mauriciokruger/a9-educacao/releases/download/v1.0.1/a9-educacao-v1.0.1.zip"><img src="docs/assets/botao-baixar-skill.png" width="240" alt="Baixar a skill v1.0.1"></a>
+  <a href="https://github.com/mauriciokruger/a9-educacao/releases/download/v1.1.0/a9-educacao-v1.1.0.zip"><img src="docs/assets/botao-baixar-skill.png" width="240" alt="Baixar a skill v1.1.0"></a>
   <a href="#instalação"><img src="docs/assets/botao-como-instalar.png" width="240" alt="Como instalar"></a>
   <a href="#exemplos-criados-com-a-skill"><img src="docs/assets/botao-ver-exemplos.png" width="240" alt="Ver exemplos"></a>
 </p>
 
-<p align="center"><strong>v1.0.1</strong> · Poppins + JetBrains Mono · Logos oficiais · 27 prompts · HTML sem internet</p>
+<p align="center"><strong>v1.1.0</strong> · Poppins + JetBrains Mono · Logos oficiais · 27 prompts · HTML sem internet</p>
 
 Use no ChatGPT, Claude ou em ambientes locais compatíveis com Agent Skills. A instalação e os recursos disponíveis dependem da plataforma e da conta.
 
@@ -28,9 +28,9 @@ Uma apresentação de seis slides sobre como pedir materiais à IA, criada usand
 
 | Experimente | Arquivos |
 | --- | --- |
-| **Seu primeiro pedido com a A9**. Apresentação de seis slides | [Baixar HTML navegável](https://github.com/mauriciokruger/a9-educacao/releases/download/v1.0.1/primeiro-pedido-a9.html) · [Ver PDF](docs/exemplos/primeiro-pedido-a9.pdf) |
-| **Oficina de produtividade**. Landing page responsiva, fictícia | [Baixar HTML](https://github.com/mauriciokruger/a9-educacao/releases/download/v1.0.1/oficina-produtividade.html) |
-| **Biblioteca de composição**. Oito tipos de slide para adaptar | [Baixar HTML](https://github.com/mauriciokruger/a9-educacao/releases/download/v1.0.1/demo-a9.html) · [Ver PDF](docs/demo-a9.pdf) |
+| **Seu primeiro pedido com a A9**. Apresentação de seis slides | [Baixar HTML navegável](https://github.com/mauriciokruger/a9-educacao/releases/download/v1.1.0/primeiro-pedido-a9.html) · [Ver PDF](docs/exemplos/primeiro-pedido-a9.pdf) |
+| **Oficina de produtividade**. Landing page responsiva, fictícia | [Baixar HTML](https://github.com/mauriciokruger/a9-educacao/releases/download/v1.1.0/oficina-produtividade.html) |
+| **Biblioteca de composição**. Oito tipos de slide para adaptar | [Baixar HTML](https://github.com/mauriciokruger/a9-educacao/releases/download/v1.1.0/demo-a9.html) · [Ver PDF](docs/demo-a9.pdf) |
 
 <details>
 <summary>Ver a prévia da landing page</summary>
@@ -45,7 +45,7 @@ Baixe os HTMLs e abra no navegador. O GitHub mostra o código do arquivo. A apre
 
 ## Comece aqui
 
-1. [Baixe a skill pronta para instalar](https://github.com/mauriciokruger/a9-educacao/releases/download/v1.0.1/a9-educacao-v1.0.1.zip).
+1. [Baixe a skill pronta para instalar](https://github.com/mauriciokruger/a9-educacao/releases/download/v1.1.0/a9-educacao-v1.1.0.zip).
 2. Siga abaixo as instruções da sua plataforma.
 3. Abra uma conversa e peça um material.
 
@@ -61,12 +61,15 @@ Baixar o repositório não instala a skill. Para instalar, use o ZIP da release,
 | [Design System](skills/a9-educacao/references/Design%20System.md) | Cores, fontes, logos e aplicações por superfície |
 | [Prompts por Setor](skills/a9-educacao/references/Prompts%20por%20Setor.md) | 27 comandos práticos em nove áreas |
 | [Apresentações](skills/a9-educacao/references/Apresenta%C3%A7%C3%B5es.md) | Composição de slides, navegação e exportação |
+| [E-mails e Assinaturas](skills/a9-educacao/references/E-mails%20e%20Assinaturas.md) | E-mail no padrão A9 e assinatura com foto do remetente |
 | [Instruções da skill](skills/a9-educacao/SKILL.md) | Ativação e escolha das referências |
 | [Modelo HTML](skills/a9-educacao/assets/apresentacoes/modelo-a9.html) | Base editável com oito tipos de slide |
 | [Demonstração HTML](skills/a9-educacao/assets/apresentacoes/demo-a9.html) | Exemplo completo de oito slides com dados fictícios |
 | [Demonstração em PDF](docs/demo-a9.pdf) | Consulta rápida ao resultado de impressão |
+| [Modelo de e-mail](skills/a9-educacao/assets/emails/modelo-a9.html) | Cabeçalho com logo, corpo claro, botão e assinatura com foto |
+| [Modelo de assinatura](skills/a9-educacao/assets/emails/assinatura-a9.html) | Base para preencher com nome, área, contatos e foto autorizados |
 
-Para abrir um HTML localmente, baixe o arquivo e abra no navegador. A visualização de código do GitHub não executa a apresentação. [Arquivos da release](https://github.com/mauriciokruger/a9-educacao/releases/tag/v1.0.1) também incluem o HTML e o PDF separadamente.
+Para abrir um HTML localmente, baixe o arquivo e abra no navegador. A visualização de código do GitHub não executa a apresentação. [Arquivos da release](https://github.com/mauriciokruger/a9-educacao/releases/tag/v1.1.0) também incluem o HTML e o PDF separadamente.
 
 ## Instalação
 
@@ -80,7 +83,7 @@ Se a sua conta tiver o recurso Skills, siga estes passos.
 
 1. Abra Plugins e a aba Skills.
 2. Selecione Create e Upload from your computer.
-3. Envie a9-educacao-v1.0.1.zip.
+3. Envie a9-educacao-v1.1.0.zip.
 4. Aguarde a análise do arquivo e conclua a instalação/habilitação apresentada.
 5. Abra uma conversa e selecione a skill com @ quando disponível, ou peça explicitamente seu uso.
 
@@ -95,7 +98,7 @@ Se o recurso não aparecer, use a alternativa por Projeto descrita abaixo. Não 
 1. Verifique se execução de código e criação de arquivos estão habilitadas na sua conta ou organização.
 2. Abra Customize / Skills.
 3. Clique em +, Create skill e Upload a skill.
-4. Envie a9-educacao-v1.0.1.zip sem descompactar.
+4. Envie a9-educacao-v1.1.0.zip sem descompactar.
 5. Habilite a skill e peça explicitamente seu uso na primeira conversa.
 
 Em Team ou Enterprise, a organização pode limitar criação e compartilhamento. Se o menu não existir, confira as configurações com quem administra o workspace.
@@ -130,7 +133,7 @@ Esta alternativa fica limitada ao Projeto e não equivale a uma skill instalada 
 
 1. Crie um Projeto chamado A9 Educação na plataforma utilizada.
 2. Descompacte o ZIP.
-3. Adicione os quatro documentos de references, os arquivos de fontes necessários, a logo e o modelo HTML aos arquivos do Projeto, conforme os formatos aceitos.
+3. Adicione os documentos de references, os arquivos de fontes necessários, a logo e os modelos que pretende usar aos arquivos do Projeto, conforme os formatos aceitos.
 4. Nas instruções do Projeto, use o texto abaixo.
 
 ```text
@@ -141,6 +144,10 @@ Sem formato especificado, apresentações usam HTML navegável 16 por 9.
 Preserve o formato solicitado e não invente fatos ou condições comerciais.
 Se algum arquivo necessário não estiver acessível, informe a lacuna.
 Não aplique a marca A9 a tarefas sem relação com a empresa.
+Para e-mails, consulte E-mails e Assinaturas e use o modelo fornecido.
+Inclua a assinatura com foto do remetente por padrão. Preserve a que
+já estiver configurada. Se faltarem dados ou foto, peça o que falta.
+Retire a assinatura quando a pessoa pedir.
 Escreva de forma próxima e clara. Não use travessão, ponto e vírgula
 ou dois-pontos nos textos. Preserve a pontuação necessária no código.
 ```
@@ -159,6 +166,22 @@ O padrão é HTML navegável com fontes e logo incorporadas, proporção 16 por 
 Peça PowerPoint ou Google Slides quando precisar desses formatos. A skill orienta a criação. A ferramenta disponível na plataforma determina se o arquivo pode ser produzido. Não é necessário conectar o CRM.
 
 Para editar PPTX em outro computador, instale as fontes de assets/fonts antes de abrir o arquivo. E-mails e alguns programas podem usar fallback por limitação do próprio aplicativo.
+
+## E-mails com a cara da A9
+
+O modelo de e-mail usa cabeçalho navy com a logo branca, detalhe lime e corpo claro. A assinatura com foto aparece no final por padrão. Se a conta já tiver uma assinatura, a skill orienta preservar o bloco completo de quem vai enviar.
+
+![Modelo demonstrativo de e-mail com a assinatura e o lugar da foto no final](docs/assets/email-a9-preview.png)
+
+A foto e os dados pertencem a cada remetente. O pacote público usa apenas um espaço reservado para mostrar a composição. Na primeira utilização, pode ser necessário fornecer a foto e os dados da assinatura. A pessoa pode pedir para removê-la.
+
+```text
+Use a skill A9 Educação para preparar um e-mail para nossa equipe
+sobre [ASSUNTO]. Use o modelo A9 e preserve minha assinatura com foto.
+Deixe como rascunho para revisão.
+```
+
+Veja o [guia de e-mails e assinaturas](skills/a9-educacao/references/E-mails%20e%20Assinaturas.md). A instalação da skill não muda as configurações do Gmail nem inclui fotos ou assinaturas pessoais da equipe.
 
 ## Outros pedidos
 

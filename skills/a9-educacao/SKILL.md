@@ -17,7 +17,8 @@ Leia [Contexto e Regras](references/Contexto%20e%20Regras.md) e [Design System](
 | --- | --- |
 | Apresentação, slides, palestra, aula ou deck | [Apresentações](references/Apresenta%C3%A7%C3%B5es.md) e modelo em assets/apresentacoes/modelo-a9.html |
 | Comandos ou aplicação de IA em uma área | [Prompts por Setor](references/Prompts%20por%20Setor.md) |
-| Site, sistema, proposta, documento, e-mail ou rede social | Seção correspondente do Design System |
+| E-mail, comunicado por e-mail ou assinatura | [E-mails e Assinaturas](references/E-mails%20e%20Assinaturas.md) e modelo em assets/emails/modelo-a9.html |
+| Site, sistema, proposta, documento ou rede social | Seção correspondente do Design System |
 
 ## Como trabalhar
 
@@ -27,6 +28,7 @@ Leia [Contexto e Regras](references/Contexto%20e%20Regras.md) e [Design System](
 4. Adapte o conteúdo à superfície. Telas de sistema, slides e propostas têm densidades e composições diferentes. Siga um modelo fornecido pelo usuário quando houver.
 5. Trabalhe com as informações fornecidas ou verificadas. Se faltar algo, diga o que precisa ser definido. Avise quando um exemplo for fictício. Não invente preços, datas, clientes, depoimentos ou resultados.
 6. Revise legibilidade, contraste, fontes, cortes, links, números e formato. Em slides, examine todos os slides e a impressão, incluindo o encerramento.
+7. Em e-mails, use o modelo A9 e termine com a assinatura do remetente, incluindo a foto por padrão. Preserve a assinatura já configurada. Se ela não estiver acessível, siga o guia para reunir os dados e a foto. Retire a assinatura quando a pessoa pedir.
 
 ## Recursos
 
@@ -34,6 +36,7 @@ Leia [Contexto e Regras](references/Contexto%20e%20Regras.md) e [Design System](
 - Fontes locais e licenças em assets/fonts.
 - Tokens em assets/tokens/tokens.json e tokens.css.
 - O modelo HTML e a demonstração usam fontes e logo incorporadas e não exigem rede.
+- Modelos de e-mail e assinatura com foto em assets/emails. A imagem de exemplo marca o lugar da foto e deve ser substituída pela foto autorizada do remetente.
 
 Os arquivos da skill ajudam a orientar a criação. A ferramenta disponível na plataforma é que permite gerar e exportar cada formato. Se não conseguir produzir o arquivo pedido, explique o motivo e combine uma alternativa com a pessoa.
 
