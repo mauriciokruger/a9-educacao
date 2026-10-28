@@ -22,26 +22,49 @@ Ela reúne os guias da marca, modelos de apresentação e 27 pedidos prontos par
 
 ## Exemplos criados com a skill
 
+Veja como o padrão A9 aparece em diferentes materiais. Escolha um formato para conhecer a prévia e abrir os arquivos.
+
+[Apresentações](#apresentações) · [Carrosséis](#carrosséis) · [E-mails](#e-mails-com-a-cara-da-a9) · [Landing pages](#landing-pages)
+
+### Apresentações
+
 Uma apresentação de seis slides sobre como pedir materiais à IA, criada usando os arquivos da skill instalada. Fontes, logo, navegação e impressão estão no próprio HTML.
 
-[![Seis slides sobre pedido, contexto, formato, exemplo, revisão e próximo passo](docs/assets/slides-em-uso.png)](docs/exemplos/primeiro-pedido-a9.pdf)
+<a href="docs/exemplos/primeiro-pedido-a9.pdf"><img src="docs/assets/slides-em-uso.png" width="720" alt="Seis slides sobre pedido, contexto, formato, exemplo, revisão e próximo passo"></a>
 
-| Experimente | Arquivos |
-| --- | --- |
-| **Seu primeiro pedido com a A9**. Apresentação de seis slides | [Baixar HTML navegável](https://github.com/mauriciokruger/a9-educacao/releases/download/v1.1.0/primeiro-pedido-a9.html) · [Ver PDF](docs/exemplos/primeiro-pedido-a9.pdf) |
-| **Oficina de produtividade**. Landing page responsiva, fictícia | [Baixar HTML](https://github.com/mauriciokruger/a9-educacao/releases/download/v1.1.0/oficina-produtividade.html) |
-| **Biblioteca de composição**. Oito tipos de slide para adaptar | [Baixar HTML](https://github.com/mauriciokruger/a9-educacao/releases/download/v1.1.0/demo-a9.html) · [Ver PDF](docs/demo-a9.pdf) |
+[Baixar a apresentação em HTML](https://github.com/mauriciokruger/a9-educacao/releases/download/v1.1.0/primeiro-pedido-a9.html) · [Ver PDF](docs/exemplos/primeiro-pedido-a9.pdf)
 
-<details>
-<summary>Ver a prévia da landing page</summary>
+Para explorar outras composições, veja também a biblioteca de oito tipos de slide. [Demonstração em HTML](https://github.com/mauriciokruger/a9-educacao/releases/download/v1.1.0/demo-a9.html) · [Demonstração em PDF](docs/demo-a9.pdf)
 
-![Landing page de oficina fictícia com navy, lime, ciano, Poppins e logo oficial A9](docs/assets/oficina-preview.png)
+### Carrosséis
 
-O exemplo mantém data, investimento e inscrições como pendentes. Todos os dados são demonstrativos.
+Quatro cards para redes sociais sobre como fazer um pedido claro à IA. Cada card desenvolve uma etapa, com a tipografia, as cores e a logo da A9.
 
-</details>
+<a href="docs/exemplos/carrossel-a9"><img src="docs/assets/carrossel-a9-preview.png" width="720" alt="Carrossel A9 com quatro cards sobre pedido claro, contexto, formato e revisão"></a>
 
-Baixe os HTMLs e abra no navegador. O GitHub mostra o código do arquivo. A apresentação interativa funciona depois do download. As fontes e a logo já estão incorporadas.
+[Ver os arquivos do carrossel](docs/exemplos/carrossel-a9) · [Card 1](docs/exemplos/carrossel-a9/01-pedido-claro.png) · [Card 2](docs/exemplos/carrossel-a9/02-contexto.png) · [Card 3](docs/exemplos/carrossel-a9/03-formato.png) · [Card 4](docs/exemplos/carrossel-a9/04-revisao.png)
+
+Os cards estão em PNG, com 1080 por 1350 px. Este é um exemplo demonstrativo para consulta e adaptação.
+
+### E-mails com a cara da A9
+
+Cabeçalho navy com a logo branca, detalhe lime, corpo claro e assinatura com foto no final. A skill orienta preservar a assinatura já configurada de quem vai enviar.
+
+<a href="docs/assets/email-a9-preview.png"><img src="docs/assets/email-a9-preview.png" width="420" alt="Modelo demonstrativo de e-mail com a assinatura e o lugar da foto no final"></a>
+
+[Ver o modelo de e-mail](skills/a9-educacao/assets/emails/modelo-a9.html) · [Ver o modelo de assinatura](skills/a9-educacao/assets/emails/assinatura-a9.html) · [Ler o guia](skills/a9-educacao/references/E-mails%20e%20Assinaturas.md)
+
+A foto e os dados pertencem a cada remetente. A imagem acima usa apenas um espaço reservado para mostrar a composição. Na primeira utilização, pode ser necessário fornecer a foto e os dados da assinatura. A pessoa pode pedir para removê-la.
+
+### Landing pages
+
+Uma página responsiva para uma oficina fictícia, com a identidade A9. Data, investimento e inscrições permanecem como pendentes.
+
+<a href="docs/assets/oficina-preview.png"><img src="docs/assets/oficina-preview.png" width="720" alt="Landing page de oficina fictícia com navy, lime, ciano, Poppins e logo oficial A9"></a>
+
+[Baixar o HTML da página](https://github.com/mauriciokruger/a9-educacao/releases/download/v1.1.0/oficina-produtividade.html)
+
+Baixe os HTMLs das apresentações e da página para abrir no navegador. O GitHub mostra o código do arquivo. Os exemplos usam dados demonstrativos.
 
 ## Comece aqui
 
@@ -167,13 +190,9 @@ Peça PowerPoint ou Google Slides quando precisar desses formatos. A skill orien
 
 Para editar PPTX em outro computador, instale as fontes de assets/fonts antes de abrir o arquivo. E-mails e alguns programas podem usar fallback por limitação do próprio aplicativo.
 
-## E-mails com a cara da A9
+## Usar em e-mails
 
-O modelo de e-mail usa cabeçalho navy com a logo branca, detalhe lime e corpo claro. A assinatura com foto aparece no final por padrão. Se a conta já tiver uma assinatura, a skill orienta preservar o bloco completo de quem vai enviar.
-
-![Modelo demonstrativo de e-mail com a assinatura e o lugar da foto no final](docs/assets/email-a9-preview.png)
-
-A foto e os dados pertencem a cada remetente. O pacote público usa apenas um espaço reservado para mostrar a composição. Na primeira utilização, pode ser necessário fornecer a foto e os dados da assinatura. A pessoa pode pedir para removê-la.
+Peça o modelo A9 e a preservação da sua assinatura com foto.
 
 ```text
 Use a skill A9 Educação para preparar um e-mail para nossa equipe
