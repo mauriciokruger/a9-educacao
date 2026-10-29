@@ -5,12 +5,12 @@
 <p align="center">Apresentações, sites, documentos e conteúdo com a identidade da A9.<br>Um pacote com nossas fontes, cores, logos, referências e prompts para o trabalho.</p>
 
 <p align="center">
-  <a href="https://github.com/mauriciokruger/a9-educacao/releases/download/v1.1.0/a9-educacao-v1.1.0.zip"><img src="docs/assets/botao-baixar-skill.png" width="240" alt="Baixar a skill v1.1.0"></a>
+  <a href="https://github.com/mauriciokruger/a9-educacao/releases/download/v1.2.0/a9-educacao-v1.2.0.zip"><img src="docs/assets/botao-baixar-skill.png" width="240" alt="Baixar a skill v1.2.0"></a>
   <a href="#instalação"><img src="docs/assets/botao-como-instalar.png" width="240" alt="Como instalar"></a>
   <a href="#exemplos-criados-com-a-skill"><img src="docs/assets/botao-ver-exemplos.png" width="240" alt="Ver exemplos"></a>
 </p>
 
-<p align="center"><strong>v1.1.0</strong> · Poppins + JetBrains Mono · Logos oficiais · 27 prompts · HTML sem internet</p>
+<p align="center"><strong>v1.2.0</strong> · Poppins + JetBrains Mono · Logos oficiais · 27 prompts · HTML sem internet</p>
 
 Use no ChatGPT, Claude ou em ambientes locais compatíveis com Agent Skills. A instalação e os recursos disponíveis dependem da plataforma e da conta.
 
@@ -68,7 +68,7 @@ Baixe os HTMLs das apresentações e da página para abrir no navegador. O GitHu
 
 ## Comece aqui
 
-1. [Baixe a skill pronta para instalar](https://github.com/mauriciokruger/a9-educacao/releases/download/v1.1.0/a9-educacao-v1.1.0.zip).
+1. [Baixe a skill pronta para instalar](https://github.com/mauriciokruger/a9-educacao/releases/download/v1.2.0/a9-educacao-v1.2.0.zip).
 2. Siga abaixo as instruções da sua plataforma.
 3. Abra uma conversa e peça um material.
 
@@ -82,6 +82,7 @@ Baixar o repositório não instala a skill. Para instalar, use o ZIP da release,
 | --- | --- |
 | [Contexto e Regras](skills/a9-educacao/references/Contexto%20e%20Regras.md) | Contexto institucional, tom de voz e uso de informações |
 | [Design System](skills/a9-educacao/references/Design%20System.md) | Cores, fontes, logos e aplicações por superfície |
+| [Plataformas e Sistemas](skills/a9-educacao/references/Plataformas%20e%20Sistemas.md) | Switches, autocomplete, calendários, máscaras, CRUD, filtros e paginação no padrão do CRM |
 | [Prompts por Setor](skills/a9-educacao/references/Prompts%20por%20Setor.md) | 27 comandos práticos em nove áreas |
 | [Apresentações](skills/a9-educacao/references/Apresenta%C3%A7%C3%B5es.md) | Composição de slides, navegação e exportação |
 | [E-mails e Assinaturas](skills/a9-educacao/references/E-mails%20e%20Assinaturas.md) | E-mail no padrão A9 e assinatura com foto do remetente |
@@ -92,7 +93,7 @@ Baixar o repositório não instala a skill. Para instalar, use o ZIP da release,
 | [Modelo de e-mail](skills/a9-educacao/assets/emails/modelo-a9.html) | Cabeçalho com logo, corpo claro, botão e assinatura com foto |
 | [Modelo de assinatura](skills/a9-educacao/assets/emails/assinatura-a9.html) | Base para preencher com nome, área, contatos e foto autorizados |
 
-Para abrir um HTML localmente, baixe o arquivo e abra no navegador. A visualização de código do GitHub não executa a apresentação. [Arquivos da release](https://github.com/mauriciokruger/a9-educacao/releases/tag/v1.1.0) também incluem o HTML e o PDF separadamente.
+Para abrir um HTML localmente, baixe o arquivo e abra no navegador. A visualização de código do GitHub não executa a apresentação. [Arquivos da release](https://github.com/mauriciokruger/a9-educacao/releases/tag/v1.2.0) também incluem o HTML e o PDF separadamente.
 
 ## Instalação
 
@@ -106,7 +107,7 @@ Se a sua conta tiver o recurso Skills, siga estes passos.
 
 1. Abra Plugins e a aba Skills.
 2. Selecione Create e Upload from your computer.
-3. Envie a9-educacao-v1.1.0.zip.
+3. Envie a9-educacao-v1.2.0.zip.
 4. Aguarde a análise do arquivo e conclua a instalação/habilitação apresentada.
 5. Abra uma conversa e selecione a skill com @ quando disponível, ou peça explicitamente seu uso.
 
@@ -121,7 +122,7 @@ Se o recurso não aparecer, use a alternativa por Projeto descrita abaixo. Não 
 1. Verifique se execução de código e criação de arquivos estão habilitadas na sua conta ou organização.
 2. Abra Customize / Skills.
 3. Clique em +, Create skill e Upload a skill.
-4. Envie a9-educacao-v1.1.0.zip sem descompactar.
+4. Envie a9-educacao-v1.2.0.zip sem descompactar.
 5. Habilite a skill e peça explicitamente seu uso na primeira conversa.
 
 Em Team ou Enterprise, a organização pode limitar criação e compartilhamento. Se o menu não existir, confira as configurações com quem administra o workspace.
@@ -189,6 +190,19 @@ O padrão é HTML navegável com fontes e logo incorporadas, proporção 16 por 
 Peça PowerPoint ou Google Slides quando precisar desses formatos. A skill orienta a criação. A ferramenta disponível na plataforma determina se o arquivo pode ser produzido. Não é necessário conectar o CRM.
 
 Para editar PPTX em outro computador, instale as fontes de assets/fonts antes de abrir o arquivo. E-mails e alguns programas podem usar fallback por limitação do próprio aplicativo.
+
+## Usar em plataformas e sistemas
+
+O guia de construção foi comparado com os componentes do CRM em 29/10/2026. Para novas interfaces, orienta usar switches em opções booleanas, Combobox e MultiCombobox em seleções e os campos de data, mês, horário e período do produto. Também cobre máscaras, estados de erro, teclado, responsividade e paginação no backend.
+
+```text
+Use a skill A9 Educação para criar um painel de atendimento no padrão do CRM.
+Inclua switches nas configurações, seleção de cliente com autocomplete,
+responsáveis com seleção múltipla e filtro de período com calendário.
+Use apenas dados fictícios e preserve os componentes do projeto existente.
+```
+
+[Ler o guia de plataformas](skills/a9-educacao/references/Plataformas%20e%20Sistemas.md). Ele orienta novas construções e não altera automaticamente telas existentes do CRM.
 
 ## Usar em e-mails
 

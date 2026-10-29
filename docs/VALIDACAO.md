@@ -1,4 +1,8 @@
-# Validação da versão 1.1.0
+# Validação da versão 1.2.0
+
+Realizada em 29/10/2026. O novo guia de plataformas foi comparado com a main atual do CRM e integrado à skill e ao pacote. Os seis testes de distribuição e dos recursos existentes passaram. Veja a [comparação e o alcance da validação](VALIDACAO-PLATAFORMAS.md).
+
+## Histórico da versão 1.1.0
 
 Realizada em 28/10/2026.
 

@@ -13,7 +13,7 @@ SKILL = ROOT / "skills" / "a9-educacao"
 class DistributionContract(unittest.TestCase):
     def test_complete_self_contained_skill(self):
         self.assertTrue((SKILL / "SKILL.md").is_file())
-        for name in ("Contexto e Regras", "Design System", "Prompts por Setor", "Apresentações"):
+        for name in ("Contexto e Regras", "Design System", "Prompts por Setor", "Apresentações", "Plataformas e Sistemas"):
             self.assertTrue((SKILL / "references" / (name + ".md")).is_file())
         self.assertEqual((SKILL / "references" / "Prompts por Setor.md").read_text("utf-8").count("```text"), 27)
         for name in ("a9-branco.png", "a9-preto.png", "a9-colorido.png"):
@@ -29,6 +29,7 @@ class DistributionContract(unittest.TestCase):
                 names = bundle.namelist()
                 self.assertIn("a9-educacao/SKILL.md", names)
                 self.assertIn("a9-educacao/references/Apresentações.md", names)
+                self.assertIn("a9-educacao/references/Plataformas e Sistemas.md", names)
                 self.assertTrue(all(n.startswith("a9-educacao/") for n in names))
                 self.assertFalse(any(".work" in n or ".git/" in n for n in names))
                 self.assertIsNone(bundle.testzip())

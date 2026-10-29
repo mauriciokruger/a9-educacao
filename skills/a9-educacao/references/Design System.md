@@ -1,6 +1,6 @@
 # Design System
 
-Identidade A9 Educação · pacote 1.1.0 · referência visual A9 v2.0 de maio de 2026
+Identidade A9 Educação · pacote 1.2.0 · referência visual A9 v2.0 de maio de 2026
 
 ## Princípios
 
@@ -85,6 +85,8 @@ Hierarquia clara, pouco texto por bloco e imagens com função. Usar prova socia
 Botão principal lime com texto navy. Contraste, foco visível, navegação por teclado, labels e textos alternativos são parte da entrega.
 
 ## Sistemas e ferramentas internas
+
+Para construir plataformas, CRMs, painéis, formulários e componentes, leia [Plataformas e Sistemas](Plataformas%20e%20Sistemas.md). O guia detalha switches, seleções com autocomplete, calendários, máscaras, rotas, filtros e paginação, com revisão do código do CRM em 29/10/2026.
 
 Interfaces do CRM usam Poppins, tokens navy e componentes consistentes. Para novos sistemas, React, TypeScript, Tailwind, shadcn/Radix e Lucide são referências de implementação quando o usuário não tiver escolhido outra stack.
 
