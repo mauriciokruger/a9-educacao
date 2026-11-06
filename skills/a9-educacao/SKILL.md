@@ -1,6 +1,6 @@
 ---
 name: a9-educacao
-description: Use para criar apresentações, sites, plataformas, sistemas, formulários, documentos, propostas, e-mails e prompts da A9 Educação ou quando a pessoa pedir o padrão visual ou de UX da A9.
+description: Use para criar apresentações, sites, sistemas, formulários, documentos, propostas, e-mails, legendas de vídeo e prompts da A9 Educação, ou aplicar seu padrão visual e de UX.
 ---
 
 # A9 Educação
@@ -20,6 +20,7 @@ Leia [Contexto e Regras](references/Contexto%20e%20Regras.md) e [Design System](
 | E-mail, comunicado por e-mail ou assinatura | [E-mails e Assinaturas](references/E-mails%20e%20Assinaturas.md) e modelo em assets/emails/modelo-a9.html |
 | Plataforma, CRM, painel, ferramenta interna, formulário ou componente de sistema | [Plataformas e Sistemas](references/Plataformas%20e%20Sistemas.md) |
 | Site institucional, landing page, proposta, documento ou rede social | Seção correspondente do Design System |
+| Vídeo com legenda no padrão A9 | [Legendas de vídeo](references/Design%20System.md#legendas-de-vídeo). No Codex, use também a skill Legenda A9 para Reels quando estiver disponível. |
 
 ## Como trabalhar
 
