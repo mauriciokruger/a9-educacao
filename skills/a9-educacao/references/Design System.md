@@ -1,6 +1,6 @@
 # Design System
 
-Identidade A9 Educação · pacote 1.3.0 · referência visual A9 v2.0 de maio de 2026
+Identidade A9 Educação · pacote 1.3.1 · referência visual A9 v2.0 de maio de 2026
 
 ## Princípios
 
@@ -128,7 +128,7 @@ Não converter automaticamente um modelo pessoal ou de um produto em regra unive
 
 Use Poppins Bold com capitalização normal. O texto é branco #FFFFFF, com contorno azul-marinho #03081C. Use verde-lima #6DFF30 em uma ou duas palavras-chave nos blocos que merecem destaque. Sincronize blocos curtos de uma ou duas linhas com a fala.
 
-Em vídeo vertical 9:16, use como referência 576 × 1024 px. A fonte tem 44 px e o contorno tem 3,2 px. Centralize na horizontal e alinhe o bloco pela base em x=288 e y=968. Assim a última linha fica na mesma altura com uma ou duas linhas. Deixe cerca de 6% da altura livre entre o texto renderizado e a borda inferior. Escale proporcionalmente, ajuste as quebras à largura e confira a margem e o contraste em amostras do vídeo.
+Em vídeo vertical 9:16, use como referência 576 × 1024 px. A fonte tem 44 px e o contorno tem 3,2 px. Centralize na horizontal e alinhe o bloco pela base em x=288 e y=768. Assim a última linha fica na mesma altura com uma ou duas linhas. Reserve cerca de 25% da altura abaixo da legenda para a interface do Reel, incluindo nome do perfil e descrição. Se essa faixa ocupar mais espaço na prévia do Instagram, suba o bloco conforme necessário. Escale proporcionalmente, ajuste as quebras à largura e confira a margem e o contraste em amostras do vídeo.
 
 Entregue um MP4 com a legenda incorporada. Confira duração, áudio, sincronização e leitura no início, meio e fim.
 
